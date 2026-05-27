@@ -1,0 +1,300 @@
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Star, ChevronLeft, ChevronRight, CheckCircle2, ShieldCheck, Globe, Clock, Award } from "lucide-react";
+import { useApp } from "../context/AppContext";
+
+const Home = () => {
+  const { t, lang } = useApp();
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const stats = [
+    { num: "25+", labelKey: "statsProducts", icon: <Award size={28} /> },
+    { num: "15+", labelKey: "statsCountries", icon: <Globe size={28} /> },
+    { num: "99.8%", labelKey: "statsDelivery", icon: <Clock size={28} /> },
+    { num: "24/7", labelKey: "statsSupport", icon: <ShieldCheck size={28} /> }
+  ];
+
+  const highlights = [
+    {
+      id: "spices-cardamom",
+      nameKey: "Premium Green Cardamom",
+      cat: "Spices",
+      img: "/cardamom.png",
+      descEn: "Aromatic extra bold cardamom from the spice hills of Kerala.",
+      descTa: "கேரளாவின் நறுமணமிக்க உயர்தர ஏலக்காய் வகைகள்."
+    },
+    {
+      id: "rice-basmati",
+      nameKey: "Premium 1121 Sella Basmati Rice",
+      cat: "Rice",
+      img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=600&auto=format&fit=crop",
+      descEn: "Extra long grain aged Basmati Rice with rich aroma.",
+      descTa: "நீளமாகவும், உதிரியாகவும் இருக்கும் பாரம்பரிய பாசுமதி அரிசி."
+    },
+    {
+      id: "coir-pith",
+      nameKey: "Coco Peat 5Kg Blocks",
+      cat: "Coir Products",
+      img: "/coir_pith.png",
+      descEn: "High water retention organic coco peat blocks from Pollachi.",
+      descTa: "பொள்ளாச்சியின் சிறந்த தேங்காய் நார்க்கழிவு உரக் கட்டிகள்."
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "Excellent product quality and fast shipping. IndoGlobal Exim has been our trusted supplier for Basmati Rice and Cardamom in the GCC region for over 3 years.",
+      client: "Al-Hamad Foods Trading Co.",
+      country: "Dubai, UAE",
+      stars: 5
+    },
+    {
+      quote: "Highly professional service! Their organic cotton garments are top-tier, and the custom clearance documentation (APEDA & ISO) was perfectly handled.",
+      client: "Vogue Imports Ltd.",
+      country: "London, UK",
+      stars: 5
+    },
+    {
+      quote: "Moisture levels and packaging of the coir peat blocks were exactly as specified. Exceptional customer service and prompt container tracking updates.",
+      client: "GreenGrow Hydroponics",
+      country: "Singapore",
+      stars: 5
+    }
+  ];
+
+  const exportCountries = [
+    { name: "India (Origin)", x: "55%", y: "65%", type: "origin" },
+    { name: "Dubai, UAE (Transit: 8 Days)", x: "42%", y: "58%", type: "destination" },
+    { name: "Singapore (Transit: 6 Days)", x: "65%", y: "74%", type: "destination" },
+    { name: "Kuala Lumpur, Malaysia (Transit: 7 Days)", x: "67%", y: "76%", type: "destination" },
+    { name: "London, UK (Transit: 22 Days)", x: "28%", y: "30%", type: "destination" },
+    { name: "New York, USA (Transit: 28 Days)", x: "12%", y: "35%", type: "destination" },
+    { name: "Toronto, Canada (Transit: 30 Days)", x: "10%", y: "28%", type: "destination" }
+  ];
+
+  const [hoveredCountry, setHoveredCountry] = useState(null);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div style={{ animation: "fadeIn 0.5s ease" }}>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="container hero-content">
+          <h1>{t("heroTitle")}</h1>
+          <p>{t("heroSubtitle")}</p>
+          <div className="hero-btns">
+            <Link to="/contact" className="btn btn-accent">
+              {t("btnGetQuote")}
+              <ArrowRight size={18} />
+            </Link>
+            <Link to="/products" className="btn btn-secondary">
+              {t("viewAllProducts")}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="container" style={{ position: "relative", zIndex: 10 }}>
+        <div className="stats-bar grid grid-4">
+          {stats.map((stat, idx) => (
+            <div key={idx} className="stat-item">
+              <div className="why-icon" style={{ marginBottom: "0.5rem" }}>
+                {stat.icon}
+              </div>
+              <div className="stat-num">{stat.num}</div>
+              <div className="stat-label">{t(stat.labelKey)}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Company Intro Section */}
+      <section className="section">
+        <div className="container">
+          <div className="info-row">
+            <div className="info-col-text">
+              <span className="text-accent" style={{ fontWeight: 700, textTransform: "uppercase", fontSize: "0.85rem", letterSpacing: "1px" }}>
+                WHO WE ARE
+              </span>
+              <h2 style={{ fontSize: "2.25rem", marginTop: "0.5rem", marginBottom: "1.5rem" }}>
+                {t("companyIntroTitle")}
+              </h2>
+              <p>{t("companyIntroDesc1")}</p>
+              <p>{t("companyIntroDesc2")}</p>
+              <div style={{ marginTop: "2rem" }}>
+                <Link to="/about" className="btn btn-primary">
+                  {lang === "ta" ? "எங்களை பற்றி அறிய" : "Read Our Full Story"}
+                </Link>
+              </div>
+            </div>
+            <div className="info-col-img">
+              <div className="img-frame">
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
+                  alt="IndoGlobal Exim Warehouse and Logistics"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="section" style={{ backgroundColor: "var(--bg-light)", borderTop: "1px solid var(--border-color)" }}>
+        <div className="container">
+          <div className="section-header">
+            <h2>{t("productHighlights")}</h2>
+            <p>{lang === "ta" ? "எங்கள் சிறந்த மற்றும் உலகளாவிய தரம் வாய்ந்த ஏற்றுமதி பொருட்களின் தொகுப்பு." : "A curated selection of our highest-demand export categories."}</p>
+          </div>
+
+          <div className="grid grid-3">
+            {highlights.map((prod) => (
+              <div key={prod.id} className="product-card">
+                <div className="product-img-wrapper">
+                  <img src={prod.img} alt={prod.nameKey} />
+                  <span className="product-category-tag">{prod.cat}</span>
+                </div>
+                <div className="product-info">
+                  <h3 style={{ fontSize: "1.15rem" }}>
+                    {lang === "ta" ? prod.nameTa || prod.nameKey : prod.nameKey}
+                  </h3>
+                  <p className="product-desc">
+                    {lang === "ta" ? prod.descTa : prod.descEn}
+                  </p>
+                  <div style={{ marginTop: "1rem" }}>
+                    <Link to={`/products?id=${prod.id}`} className="btn btn-secondary btn-sm" style={{ width: "100%" }}>
+                      {lang === "ta" ? "விவரக்குறிப்புகளைக் காண்க" : "View Specifications"}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center" style={{ marginTop: "3rem" }}>
+            <Link to="/products" className="btn btn-outline-gold">
+              {t("viewAllProducts")} <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Export Map */}
+      <section className="section" style={{ backgroundColor: "#0A1424", color: "#FFF" }}>
+        <div className="container">
+          <div className="section-header">
+            <h2 style={{ color: "#FFF" }}>{t("countriesTitle")}</h2>
+            <p style={{ color: "#94A3B8" }}>{t("countriesSubtitle")}</p>
+          </div>
+
+          <div className="map-container">
+            <h3 style={{ color: "var(--accent)", marginBottom: "1rem", textAlign: "center" }}>
+              {lang === "ta" ? "விநியோக வழித்தடம் & போக்குவரத்து நேரம்" : "Explore Shipping Routes & Transit Times"}
+            </h3>
+            <p className="text-center text-muted" style={{ fontSize: "0.9rem", color: "#94A3B8" }}>
+              {lang === "ta" ? "குறியீடுகள் மீது கர்சரை நகர்த்தி விவரங்களைப் பார்க்கவும்." : "Hover over the green (origin) and gold (destinations) hubs to view details."}
+            </p>
+
+            <div className="map-svg-mock">
+              {/* World Map Background silhouette */}
+              <img
+                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop"
+                alt="World Map Silhouette"
+                className="map-bg-image"
+              />
+
+              {/* Draw dots */}
+              {exportCountries.map((c, i) => (
+                <div
+                  key={i}
+                  className={`map-dot ${c.type === "origin" ? "origin-dot" : ""}`}
+                  style={{ left: c.x, top: c.y }}
+                  onMouseEnter={() => setHoveredCountry(c)}
+                  onMouseLeave={() => setHoveredCountry(null)}
+                ></div>
+              ))}
+
+              {/* Map Lines from origin (India - 55%, 65%) to others */}
+              <svg style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none" }}>
+                <path d="M 55% 65% Q 48% 61% 42% 58%" stroke="var(--accent)" strokeWidth="1.5" fill="none" strokeDasharray="5,5" opacity="0.6" />
+                <path d="M 55% 65% Q 60% 69% 65% 74%" stroke="var(--accent)" strokeWidth="1.5" fill="none" strokeDasharray="5,5" opacity="0.6" />
+                <path d="M 55% 65% Q 61% 70% 67% 76%" stroke="var(--accent)" strokeWidth="1.5" fill="none" strokeDasharray="5,5" opacity="0.6" />
+                <path d="M 55% 65% Q 41% 47% 28% 30%" stroke="var(--accent)" strokeWidth="1.5" fill="none" strokeDasharray="5,5" opacity="0.6" />
+                <path d="M 55% 65% C 40% 45%, 25% 45%, 12% 35%" stroke="var(--accent)" strokeWidth="1.5" fill="none" strokeDasharray="5,5" opacity="0.6" />
+                <path d="M 55% 65% C 38% 40%, 22% 38%, 10% 28%" stroke="var(--accent)" strokeWidth="1.5" fill="none" strokeDasharray="5,5" opacity="0.6" />
+              </svg>
+
+              {/* Tooltip */}
+              {hoveredCountry && (
+                <div
+                  className="map-tooltip"
+                  style={{
+                    left: hoveredCountry.x,
+                    top: hoveredCountry.y,
+                    animation: "fadeIn 0.2s ease"
+                  }}
+                >
+                  <strong style={{ color: hoveredCountry.type === "origin" ? "var(--success)" : "var(--accent)" }}>
+                    {hoveredCountry.name}
+                  </strong>
+                  <div style={{ fontSize: "0.75rem", marginTop: "0.25rem", color: "#E2E8F0" }}>
+                    {hoveredCountry.type === "origin"
+                      ? (lang === "ta" ? "தலைமை அலுவலகம் & ஏற்றுமதி மையம்" : "Headquarters & Export Gateway")
+                      : (lang === "ta" ? "கடல்வழி போக்குவரத்து மற்றும் விநியோகம்" : "Direct container freight and custom clearances setup.")}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="section" style={{ borderBottom: "1px solid var(--border-color)" }}>
+        <div className="container">
+          <div className="section-header">
+            <h2>{t("testimonialsTitle")}</h2>
+            <p>{lang === "ta" ? "எங்கள் வாடிக்கையாளர்களின் நம்பிக்கையான சான்றுகள்." : "Feedback from verified wholesale buyers worldwide."}</p>
+          </div>
+
+          <div className="testimonial-carousel">
+            <div className="flex-center" style={{ gap: "0.25rem", color: "var(--accent-gold)", marginBottom: "1rem" }}>
+              {[...Array(testimonials[currentTestimonial].stars)].map((_, i) => (
+                <Star key={i} size={18} fill="currentColor" />
+              ))}
+            </div>
+            <p className="testimonial-quote">
+              “{testimonials[currentTestimonial].quote}”
+            </p>
+            <div className="testimonial-client">
+              {testimonials[currentTestimonial].client}
+            </div>
+            <div className="testimonial-company">
+              {testimonials[currentTestimonial].country}
+            </div>
+
+            <div className="carousel-dots">
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentTestimonial(idx)}
+                  className={`carousel-dot ${currentTestimonial === idx ? "active" : ""}`}
+                  aria-label={`Go to testimonial ${idx + 1}`}
+                ></button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
