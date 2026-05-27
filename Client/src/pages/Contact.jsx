@@ -80,7 +80,7 @@ const Contact = () => {
                 </div>
                 <div className="contact-info-content">
                   <h3>{t("phoneLabel")}</h3>
-                  <p style={{ fontWeight: "bold", color: "var(--primary)" }}>+91 98401 23456</p>
+                  <p style={{ fontWeight: "bold", color: "var(--primary)" }}>+91 88707 78542</p>
                   <p style={{ fontSize: "0.8rem", color: "var(--success)" }}>Available on WhatsApp & Telegram</p>
                 </div>
               </div>

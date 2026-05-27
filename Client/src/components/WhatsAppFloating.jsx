@@ -6,7 +6,7 @@ const WhatsAppFloating = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t, lang } = useApp();
 
-  const phoneNumber = "919840123456"; // Default company contact number
+  const phoneNumber = "918870778542"; // Default company contact number
 
   const departments = [
     {

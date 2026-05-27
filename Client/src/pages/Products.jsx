@@ -135,7 +135,7 @@ const Products = () => {
           </div>
 
           <div class="footer-info">
-            IndoGlobal Exim Co. | Guindy Industrial Estate, Chennai, India | Phone: +91 98401 23456 | Email: info@indoglobalexim.com
+            IndoGlobal Exim Co. | Guindy Industrial Estate, Chennai, India | Phone: +91 88707 78542 | Email: info@indoglobalexim.com
           </div>
 
           <script>
