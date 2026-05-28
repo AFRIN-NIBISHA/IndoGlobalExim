@@ -3,6 +3,7 @@ import { Send, CheckCircle } from "lucide-react";
 import { useApp } from "../context/AppContext";
 import { products } from "../data/productsData";
 import { CONFIG } from "../config";
+import emailjs from "@emailjs/browser";
 
 const InquiryForm = ({ initialProduct = "" }) => {
   const { t, lang } = useApp();
@@ -38,30 +39,56 @@ const InquiryForm = ({ initialProduct = "" }) => {
     setIsSubmitting(true);
 
     const hasTelegram = !!(CONFIG.TELEGRAM_BOT_TOKEN && CONFIG.TELEGRAM_CHAT_ID);
+    const hasEmailJS = !!(CONFIG.EMAILJS_SERVICE_ID && CONFIG.EMAILJS_TEMPLATE_ID && CONFIG.EMAILJS_PUBLIC_KEY);
 
-    // 1. Prepare Email Notification via FormSubmit (Direct to afrinnibisha65@gmail.com securely)
+    // 1. Prepare Email Notification
     let emailPromise = Promise.resolve();
-    const formToken = "41b8aab6c0238a65089b5c025e1ea545";
-    
-    emailPromise = fetch(`https://formsubmit.co/ajax/${formToken}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        _subject: `New Bulk Inquiry from ${formData.name} - SecureAgri Impex`,
-        _captcha: "false",
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        product: formData.product || "Not Specified",
-        quantity: formData.quantity || "Not Specified",
-        message: formData.message || "No message provided."
+    if (hasEmailJS) {
+      // Premium Custom Template email via EmailJS
+      emailPromise = emailjs.send(
+        CONFIG.EMAILJS_SERVICE_ID,
+        CONFIG.EMAILJS_TEMPLATE_ID,
+        {
+          subject: `New Bulk Inquiry from ${formData.name} - SecureAgri Impex`,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          product: formData.product || "Not Specified",
+          quantity: formData.quantity || "Not Specified",
+          message: formData.message || "No message provided."
+        },
+        CONFIG.EMAILJS_PUBLIC_KEY
+      )
+        .then((response) => {
+          console.log("Email sent successfully via EmailJS!", response.status, response.text);
+        })
+        .catch((error) => {
+          console.error("EmailJS sending failed:", error);
+        });
+    } else {
+      // Clean HTML Table fallback email via FormSubmit (Direct to afrinnibisha65@gmail.com securely)
+      const formToken = "41b8aab6c0238a65089b5c025e1ea545";
+      emailPromise = fetch(`https://formsubmit.co/ajax/${formToken}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          _subject: `New Bulk Inquiry from ${formData.name} - SecureAgri Impex`,
+          _captcha: "false",
+          _template: "table", // Renders structured HTML table instead of plain list
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          product: formData.product || "Not Specified",
+          quantity: formData.quantity || "Not Specified",
+          message: formData.message || "No message provided."
+        })
       })
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("FormSubmit response:", data);
-      })
-      .catch((err) => console.error("Error submitting email via FormSubmit:", err));
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("FormSubmit response:", data);
+        })
+        .catch((err) => console.error("Error submitting email via FormSubmit:", err));
+    }
 
     // 2. Prepare Telegram Notification via Bot API
     let telegramPromise = Promise.resolve();
