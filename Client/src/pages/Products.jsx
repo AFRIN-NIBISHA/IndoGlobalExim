@@ -49,8 +49,7 @@ const Products = () => {
     "coconut-fresh-tender": "/tender_coconut.png",
     "coconut-fresh-copra": "/coconut.png",
 
-    // Coconut By-Products
-    "coconut-by-cocopeat": "/coir_pith.png"
+
   };
 
   // Filter products based on Category and Search Query

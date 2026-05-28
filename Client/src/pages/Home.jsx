@@ -33,12 +33,13 @@ const Home = () => {
       descTa: "பொள்ளாச்சி பகுதியில் இருந்து பெறப்பட்ட நாரோடி உரித்த உயர்தர தேங்காய்கள்."
     },
     {
-      id: "coconut-by-cocopeat",
-      nameKey: "Coco Peat 5Kg Blocks",
-      cat: "Coconut By-Products",
-      img: "/coir_pith.png",
-      descEn: "High water retention organic coco peat blocks from Pollachi.",
-      descTa: "பொள்ளாச்சியின் சிறந்த தேங்காய் நார்க்கழிவு உரக் கட்டிகள்."
+      id: "coconut-fresh-fullyhusked",
+      nameKey: "Fully Husked Coconut",
+      nameTa: "முழுமையாக நார் நீக்கிய தேங்காய்",
+      cat: "Fresh Coconuts",
+      img: "/fully_husked.png",
+      descEn: "Clean, washed fully husked shell coconuts, ready for retail and processing.",
+      descTa: "பொள்ளாச்சி பகுதியில் இருந்து பெறப்பட்ட தூய்மையான முழு நார் உரித்த தேங்காய்கள்."
     }
   ];
 
@@ -58,8 +59,8 @@ const Home = () => {
       stars: 5
     },
     {
-      quoteEn: "We inspected their trial shipment of fresh coconuts and coir peat blocks. The moisture levels and weight parameters strictly matched the contract specification sheet.",
-      quoteTa: "புதிய தேங்காய்கள் மற்றும் தேங்காய் நார்க்கழிவு உரக் கட்டிகளின் மாதிரிகளை நாங்கள் ஆய்வு செய்தோம். ஈரப்பதம் மற்றும் எடை அளவுகள் ஒப்பந்தத்தில் குறிப்பிட்டபடியே துல்லியமாக இருந்தன.",
+      quoteEn: "We inspected their trial shipment of fresh coconuts and fully husked coconuts. The moisture levels and weight parameters strictly matched the contract specification sheet.",
+      quoteTa: "புதிய தேங்காய்கள் மற்றும் முழுமையாக நார் நீக்கிய தேங்காய்களின் மாதிரிகளை நாங்கள் ஆய்வு செய்தோம். ஈரப்பதம் மற்றும் எடை அளவுகள் ஒப்பந்தத்தில் குறிப்பிட்டபடியே துல்லியமாக இருந்தன.",
       client: "GreenGrow Hydroponics",
       country: "Singapore",
       stars: 5

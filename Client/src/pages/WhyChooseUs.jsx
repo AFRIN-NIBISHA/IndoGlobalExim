@@ -160,8 +160,8 @@ const WhyChooseUs = () => {
             <FAQItem
               q={lang === "ta" ? "குறைந்தபட்ச ஆர்டர் அளவு (MOQ) எவ்வளவு?" : "What is your typical Minimum Order Quantity (MOQ)?"}
               a={lang === "ta" 
-                ? "MOQ தயாரிப்பைப் பொறுத்து மாறுபடும். அரிசி மற்றும் தேங்காய் நார்க்கழிவு 20 மெட்ரிக் டன் (1 கன்டெய்னர்). ஏலக்காய் போன்ற மசாலாப் பொருட்களுக்கு 500 கிலோ மட்டுமே." 
-                : "MOQ varies by product. For high-volume commodities like Rice, Onions, and Coco Peat, the MOQ is 1 Full Container Load (FCL, approx 20 Metric Tons). For high-value spices like cardamom, the MOQ is 500 Kg."
+                ? "MOQ தயாரிப்பைப் பொறுத்து மாறுபடும். அரிசி மற்றும் தேங்காய்கள் 20 மெட்ரிக் டன் (1 கன்டெய்னர்). மசாலாப் பொருட்களுக்கு 500 கிலோ மட்டுமே." 
+                : "MOQ varies by product. For high-volume commodities like Rice and Coconuts, the MOQ is 1 Full Container Load (FCL, approx 20 Metric Tons). For spices, the MOQ is 500 Kg."
               }
             />
             <FAQItem
