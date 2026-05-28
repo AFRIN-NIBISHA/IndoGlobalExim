@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { useApp } from "../context/AppContext";
+import { products } from "../data/productsData";
 
 const InquiryForm = ({ initialProduct = "" }) => {
   const { t, lang } = useApp();
@@ -126,18 +127,13 @@ const InquiryForm = ({ initialProduct = "" }) => {
             value={formData.product}
             onChange={handleChange}
           >
-            <option value="">-- Select Product --</option>
-            <option value="Premium Green Cardamom">Premium Green Cardamom</option>
-            <option value="Organic Turmeric Finger & Powder">Organic Turmeric Finger & Powder</option>
-            <option value="Premium 1121 Sella Basmati Rice">Premium 1121 Sella Basmati Rice</option>
-            <option value="Non-Basmati Ponni Rice">Non-Basmati Ponni Rice</option>
-            <option value="100% Organic Cotton T-Shirts">100% Organic Cotton T-Shirts</option>
-            <option value="Coco Peat 5Kg Blocks">Coco Peat 5Kg Blocks (Coir Pith)</option>
-            <option value="Handcrafted Rosewood & Brass Decor">Handcrafted Rosewood & Brass Decor</option>
-            <option value="Fresh Red Onions">Fresh Red Onions</option>
-            <option value="Semi-Husked Coconuts">Fully/Semi-Husked Coconuts</option>
-            <option value="Commercial Oil Press Machine">Commercial Oil Press Machine</option>
-            <option value="Other Product">Other / Bulk Custom Commodity</option>
+            <option value="">{lang === "ta" ? "-- தயாரிப்பைத் தேர்ந்தெடுக்கவும் --" : "-- Select Product --"}</option>
+            {products.map((p) => (
+              <option key={p.id} value={p.nameEn}>
+                {lang === "ta" ? p.nameTa : p.nameEn}
+              </option>
+            ))}
+            <option value="Other Product">{lang === "ta" ? "பிற தயாரிப்புகள் / தனிப்பயன்" : "Other / Bulk Custom Commodity"}</option>
           </select>
         </div>
         <div className="form-group">
