@@ -29,7 +29,7 @@ export const translations = {
     testimonialsTitle: "What Our Global Clients Say",
     
     aboutStoryTitle: "Our Story",
-    aboutStoryText: "SecureAgri Impex was founded with a singular vision: to bring India's rich bounty of natural agricultural products and skilled craftsmanship to the global stage. From our humble beginnings in domestic sourcing, we have scaled our operations to establish robust export lines to the Middle East, Southeast Asia, Europe, and North America. Today, we partner with certified organic farmers and state-of-the-art processing units to offer top-tier products.",
+    aboutStoryText: "SecureAgri Impex is founded in 2026 with a singular vision: to bring India's premium agricultural bounty and skilled craftsmanship directly to the global stage. Sourcing directly from certified farms and local cooperatives, we establish highly secure, compliant, and direct export lines to international buyers. We partner with state-of-the-art processing units to deliver verified, high-quality products from day one.",
     founderVisionTitle: "Founder's Vision",
     founderVisionText: "To build a transparent, efficient, and sustainable export network that empowers local Indian producers while delivering absolute purity, reliability, and value to international buyers. We aim to become the first choice for bulk sourcing in agricultural and industrial sectors.",
     missionTitle: "Our Mission",
@@ -140,7 +140,7 @@ export const translations = {
     testimonialsTitle: "எங்கள் உலகளாவிய வாடிக்கையாளர்களின் கருத்துக்கள்",
     
     aboutStoryTitle: "எங்கள் கதை",
-    aboutStoryText: "இந்தியாவின் வளமான இயற்கை விவசாயப் பொருட்கள் மற்றும் கைவினைத் திறனை உலக அரங்கிற்கு கொண்டு செல்ல வேண்டும் என்ற ஒரே நோக்கத்துடன் செக்யூர்அக்ரி இம்பெக்ஸ் தொடங்கப்பட்டது. உள்நாட்டு கொள்முதலில் எங்களது பயணத்தைத் தொடங்கி, இன்று மத்திய கிழக்கு, தென்கிழக்கு ஆசியா, ஐரோப்பா மற்றும் வட அமெரிக்கா ஆகிய நாடுகளுக்கு வலுவான ஏற்றுமதி வழிகளை நிறுவியுள்ளோம். நாங்கள் சான்றளிக்கப்பட்ட இயற்கை விவசாயிகள் மற்றும் அதிநவீன செயலாக்க அலகுகளுடன் கூட்டு சேர்ந்து உயர்தர தயாரிப்புகளை வழங்குகிறோம்.",
+    aboutStoryText: "இந்தியாவின் வளமான இயற்கை விவசாயப் பொருட்கள் மற்றும் கைவினைத் திறனை உலக அரங்கிற்கு கொண்டு செல்ல வேண்டும் என்ற ஒரே நோக்கத்துடன் 2026-இல் செக்யூர்அக்ரி இம்பெக்ஸ் தொடங்கப்பட்டது. விவசாயிகள் மற்றும் உற்பத்தியாளர்களிடமிருந்து நேரடியாகக் கொள்முதல் செய்வதன் மூலம், உலகளாவிய வாங்குபவர்களுக்கு பாதுகாப்பான மற்றும் சான்றளிக்கப்பட்ட ஏற்றுமதி வழிகளை நாங்கள் வழங்குகிறோம். முதல் நாளில் இருந்தே உயர்தர மற்றும் தூய்மையான தயாரிப்புகளை வழங்குவதை நாங்கள் உறுதி செய்கிறோம்.",
     founderVisionTitle: "நிறுவனரின் தொலைநோக்கு",
     founderVisionText: "இந்தியாவின் உள்ளூர் உற்பத்தியாளர்களை ஊக்குவிக்கும் அதே வேளையில், சர்வதேச வாங்குபவர்களுக்கு முழுமையான தூய்மை, நம்பகத்தன்மை மற்றும் மதிப்பை வழங்கும் ஒரு வெளிப்படையான, திறமையான மற்றும் நிலையான ஏற்றுமதி வலையமைப்பை உருவாக்குவது. விவசாய மற்றும் தொழில்துறை துறைகளில் மொத்த கொள்முதலுக்கான சிறந்த தேர்வாக மாறுவதை நாங்கள் நோக்கமாகக் கொண்டுள்ளோம்.",
     missionTitle: "எங்கள் லட்சியம்",

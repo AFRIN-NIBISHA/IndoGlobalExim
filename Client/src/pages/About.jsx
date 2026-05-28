@@ -35,25 +35,25 @@ const About = () => {
 
   const timeline = [
     {
-      year: "2024",
-      titleEn: "Company Foundation",
-      titleTa: "நிறுவனம் தொடக்கம்",
-      descEn: "Founded in Chennai, India, with a core mission to connect local farmers and premium spice & rice producers to international markets.",
-      descTa: "உள்ளூர் விவசாயிகள் மற்றும் பிரீமியம் உற்பத்தியாளர்களை சர்வதேச சந்தையுடன் இணைக்கும் நோக்கத்துடன் சென்னையில் தொடங்கப்பட்டது."
-    },
-    {
-      year: "2025",
-      titleEn: "Certifications & Setup",
-      titleTa: "சான்றிதழ்கள் மற்றும் முதல் ஏற்றுமதி",
-      descEn: "Acquired official FSSAI, APEDA, ISO 9001:2015 quality credentials and executed our first container shipments of Basmati Rice to the GCC region.",
-      descTa: "FSSAI, APEDA, ISO 9001:2015 சான்றிதழ்களைப் பெற்று, வளைகுடா நாடுகளுக்கு எங்களது முதல் கொள்கலன் பாசுமதி அரிசி ஏற்றுமதியைத் தொடங்கியது."
+      year: "2026",
+      titleEn: "Launch & Sourcing Setup",
+      titleTa: "நிறுவனம் தொடக்கம் & கொள்முதல்",
+      descEn: "Founded in Chennai, India, establishing direct farm-gate sourcing networks for premium agricultural exports.",
+      descTa: "உள்ளூர் விவசாயிகள் மற்றும் உற்பத்தியாளர்களிடம் இருந்து நேரடியாக கொள்முதல் செய்யும் நெட்வொர்க்குகளுடன் சென்னையில் தொடங்கப்பட்டது."
     },
     {
       year: "2026",
-      titleEn: "Global Expansion & Smart Packing",
-      titleTa: "உலகளாவிய விரிவாக்கம் & பேக்கிங் வசதிகள்",
-      descEn: "Expanding regular exports to the USA, Europe, and Southeast Asia. Inaugurating advanced vacuum packing and cold storage warehousing near Major Ports.",
-      descTa: "அமெரிக்கா, ஐரோப்பா மற்றும் தென்கிழக்கு ஆசியாவிற்கு ஏற்றுமதியை விரிவாக்கம் செய்து, முக்கிய துறைமுகங்கள் அருகே அதிநவீன வெற்றிட பேக்கேஜிங் கிடங்குகளை அமைத்தல்."
+      titleEn: "Compliance & Certifications",
+      titleTa: "தரச்சான்றுகள் & அனுமதிகள்",
+      descEn: "Securing APEDA, FSSAI, ISO 9001:2015 registration credentials to guarantee 100% legal customs clearances.",
+      descTa: "பாதுகாப்பான மற்றும் சான்றளிக்கப்பட்ட ஏற்றுமதிகளுக்காக APEDA, FSSAI மற்றும் ISO 9001:2015 சான்றிதழ்களைப் பெறுதல்."
+    },
+    {
+      year: "2026 & Beyond",
+      titleEn: "Smart Sourcing & Packing",
+      titleTa: "அதிநவீன பேக்கிங் & எதிர்காலம்",
+      descEn: "Inaugurating advanced vacuum-sealed packing lines and cold storage warehousing near major ports to preserve maximum freshness.",
+      descTa: "அதிகபட்ச அடுக்கு ஆயுளுக்காக துறைமுகங்கள் அருகே அதிநவீன வெற்றிட பேக்கேஜிங் மற்றும் குளிர்சாதன கிடங்கு வசதிகளைத் தொடங்குதல்."
     }
   ];
 
@@ -66,7 +66,7 @@ const About = () => {
             {t("navAbout")}
           </h1>
           <p style={{ color: "var(--accent)", fontWeight: "600", letterSpacing: "1px", textTransform: "uppercase" }}>
-            SecureAgri Impex — Delivering Pure Excellence Since 2024
+            SecureAgri Impex — Delivering Pure Excellence Since 2026
           </p>
         </div>
       </section>
