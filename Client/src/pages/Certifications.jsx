@@ -60,19 +60,6 @@ const Certifications = () => {
       purposeTa: "விவசாயப் பொருட்கள், காய்கறிகள் மற்றும் அரிசி ஏற்றுமதி செய்வதற்கான அரசாங்கத்தின் உத்தியோகபூர்வ உறுப்பினர் சான்றிதழ்."
     },
     {
-      id: "iso",
-      code: "ISO",
-      nameEn: "ISO 9001:2015 Quality Management",
-      nameTa: "ISO 9001:2015 தர மேலாண்மை சான்றிதழ்",
-      authorityEn: "QMS International Certification Services / Accreditation Body",
-      authorityTa: "QMS சர்வதேச தரச்சான்று நிறுவனம்",
-      number: "Certificate No: QMS-2026-9001-38",
-      validityEn: "Valid till Feb 2029",
-      validityTa: "பிப்ரவரி 2029 வரை செல்லுபடியாகும்",
-      purposeEn: "International audit clearance validating systematic quality checks, warehousing cleanliness, and process handling.",
-      purposeTa: "கொள்முதல் மற்றும் கிடங்கு மேலாண்மை சர்வதேச தரத்தில் இருப்பதை உறுதி செய்யும் உலகளாவிய சான்றிதழ்."
-    },
-    {
       id: "organic",
       code: "ORGANIC",
       nameEn: "National Program for Organic Production",
@@ -166,7 +153,7 @@ const Certifications = () => {
                 {lang === "ta" ? "சர்வதேச தர இணக்க உத்திரவாதம்" : "Building Global Buyer Trust through Legal Compliance"}
               </h2>
               <p style={{ color: "var(--text-muted)", fontSize: "1.05rem" }}>
-                To ensure a smooth custom clearance process at destination ports, we keep our certifications, memberships, and corporate filings updated with government organizations. From phytosanitary safety (FSSAI, APEDA) to quality audits (ISO 9001:2015), our trade procedures are fully transparent and verified.
+                To ensure a smooth custom clearance process at destination ports, we keep our certifications, memberships, and corporate filings updated with government organizations. From phytosanitary safety (FSSAI, APEDA) to clean warehousing compliance, our trade procedures are fully transparent and verified.
               </p>
               <div style={{ marginTop: "1.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.9rem", fontWeight: "600" }}>

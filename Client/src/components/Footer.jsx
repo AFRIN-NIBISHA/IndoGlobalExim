@@ -19,7 +19,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="footer-desc">
-              We are a government-registered Indian multi-commodity exporter, certified by APEDA, FSSAI, and ISO. Delivering export-quality agriculture, textile, and handicraft products globally.
+              We are a government-registered Indian multi-commodity exporter, certified by APEDA and FSSAI. Sourcing and delivering premium export-quality products globally.
             </p>
             <div className="flex-center" style={{ justifyContent: "flex-start", gap: "1rem", marginTop: "0.5rem" }}>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ color: "#94A3B8" }} aria-label="LinkedIn">

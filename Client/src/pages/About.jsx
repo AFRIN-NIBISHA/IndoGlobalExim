@@ -45,8 +45,8 @@ const About = () => {
       year: "2026",
       titleEn: "Compliance & Certifications",
       titleTa: "தரச்சான்றுகள் & அனுமதிகள்",
-      descEn: "Securing APEDA, FSSAI, ISO 9001:2015 registration credentials to guarantee 100% legal customs clearances.",
-      descTa: "பாதுகாப்பான மற்றும் சான்றளிக்கப்பட்ட ஏற்றுமதிகளுக்காக APEDA, FSSAI மற்றும் ISO 9001:2015 சான்றிதழ்களைப் பெறுதல்."
+      descEn: "Securing APEDA and FSSAI registration credentials to guarantee 100% legal customs clearances.",
+      descTa: "பாதுகாப்பான மற்றும் சான்றளிக்கப்பட்ட ஏற்றுமதிகளுக்காக APEDA மற்றும் FSSAI சான்றிதழ்களைப் பெறுதல்."
     },
     {
       year: "2026 & Beyond",
@@ -90,7 +90,7 @@ const About = () => {
                   <CheckCircle size={18} style={{ color: "var(--success)" }} /> FSSAI Certified
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontWeight: "600" }}>
-                  <CheckCircle size={18} style={{ color: "var(--success)" }} /> ISO 9001 Quality
+                  <CheckCircle size={18} style={{ color: "var(--success)" }} /> NPOP Organic
                 </div>
               </div>
             </div>
