@@ -37,39 +37,31 @@ const InquiryForm = ({ initialProduct = "" }) => {
     }
     setIsSubmitting(true);
 
-    const hasWeb3Forms = !!CONFIG.WEB3FORMS_ACCESS_KEY;
     const hasTelegram = !!(CONFIG.TELEGRAM_BOT_TOKEN && CONFIG.TELEGRAM_CHAT_ID);
 
-    // 1. Prepare Email Notification via Web3Forms
+    // 1. Prepare Email Notification via FormSubmit (Direct to afrinnibisha65@gmail.com)
     let emailPromise = Promise.resolve();
-    if (hasWeb3Forms) {
-      emailPromise = fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: CONFIG.WEB3FORMS_ACCESS_KEY,
-          subject: `New Bulk Inquiry from ${formData.name} - SecureAgri Impex`,
-          from_name: "SecureAgri Impex Portal",
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          product: formData.product || "Not Specified",
-          quantity: formData.quantity || "Not Specified",
-          message: formData.message || "No message provided."
-        })
+    const targetEmail = "afrinnibisha65@gmail.com";
+    
+    emailPromise = fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        _subject: `New Bulk Inquiry from ${formData.name} - SecureAgri Impex`,
+        _captcha: "false",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        product: formData.product || "Not Specified",
+        quantity: formData.quantity || "Not Specified",
+        message: formData.message || "No message provided."
       })
-        .then((res) => res.json())
-        .then((data) => {
-          if (!data.success) {
-            console.error("Web3Forms Email submission failed:", data.message);
-          } else {
-            console.log("Web3Forms Email sent successfully!");
-          }
-        })
-        .catch((err) => console.error("Error submitting to Web3Forms:", err));
-    } else {
-      console.warn("Web3Forms Access key is not configured in Client/src/config.js. Sourcing mock email transmission instead.");
-    }
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("FormSubmit response:", data);
+      })
+      .catch((err) => console.error("Error submitting email via FormSubmit:", err));
 
     // 2. Prepare Telegram Notification via Bot API
     let telegramPromise = Promise.resolve();
