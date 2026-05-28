@@ -1,8 +1,8 @@
 @echo off
-title IndoGlobal Exim Website Runner
+title SecureAgri Impex Website Runner
 color 0B
 echo ===================================================
-echo             INDOGLOBAL EXIM WEBSITE RUNNER
+echo             SECUREAGRI IMPEX WEBSITE RUNNER
 echo ===================================================
 echo.
 echo [1/2] Checking environment...

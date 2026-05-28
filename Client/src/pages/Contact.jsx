@@ -91,8 +91,8 @@ const Contact = () => {
                 </div>
                 <div className="contact-info-content">
                   <h3>{t("emailLabel")}</h3>
-                  <p style={{ fontWeight: "bold", color: "var(--primary)" }}>info@indoglobalexim.com</p>
-                  <p style={{ fontSize: "0.8rem" }}>General sales desk: sales@indoglobalexim.com</p>
+                  <p style={{ fontWeight: "bold", color: "var(--primary)" }}>info@secureagriimpex.com</p>
+                  <p style={{ fontSize: "0.8rem" }}>General sales desk: sales@secureagriimpex.com</p>
                 </div>
               </div>
 

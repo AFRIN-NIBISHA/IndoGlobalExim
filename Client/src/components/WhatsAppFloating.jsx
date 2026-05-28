@@ -14,21 +14,21 @@ const WhatsAppFloating = () => {
       nameTa: "விற்பனை மற்றும் மொத்த விசாரணைகள்",
       descEn: "Get instant price quotes & MOQ details",
       descTa: "விலை விவரங்கள் மற்றும் MOQ அறிய",
-      msg: "Hi IndoGlobal Exim Sales team, I am interested in a bulk import inquiry."
+      msg: "Hi SecureAgri Impex Sales team, I am interested in a bulk import inquiry."
     },
     {
       nameEn: "Logistics & Shipping",
       nameTa: "ஷிப்பிங் & தளவாடங்கள் பிரிவு",
       descEn: "Track your containers & delivery schedules",
       descTa: "சரக்கு கன்டெய்னர் கண்காணிப்பு மற்றும் விநியோக கால அட்டவணை",
-      msg: "Hi IndoGlobal Exim Logistics team, I would like to check shipment status."
+      msg: "Hi SecureAgri Impex Logistics team, I would like to check shipment status."
     },
     {
       nameEn: "Documentation & Customs",
       nameTa: "சுங்க ஆவணங்கள் பிரிவு",
       descEn: "Inquire about APEDA, FSSAI, L/C, B/L documentation",
       descTa: "APEDA, FSSAI, L/C, B/L ஆவணங்கள் பற்றி அறிய",
-      msg: "Hi IndoGlobal Exim Documentation team, I need information regarding custom clearance docs."
+      msg: "Hi SecureAgri Impex Documentation team, I need information regarding custom clearance docs."
     }
   ];
 
@@ -44,9 +44,9 @@ const WhatsAppFloating = () => {
         <div className="whatsapp-drawer">
           {/* Header */}
           <div className="whatsapp-header">
-            <div className="whatsapp-avatar">IE</div>
+            <div className="whatsapp-avatar">SA</div>
             <div>
-              <h4 style={{ color: "#fff", fontSize: "0.95rem" }}>IndoGlobal Exim</h4>
+              <h4 style={{ color: "#fff", fontSize: "0.95rem" }}>SecureAgri Impex</h4>
               <p style={{ color: "#a7f3d0", fontSize: "0.75rem" }}>Typically replies in 15 minutes</p>
             </div>
             <button

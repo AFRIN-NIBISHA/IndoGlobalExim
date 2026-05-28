@@ -13,9 +13,9 @@ const Footer = () => {
           {/* Logo and Intro */}
           <div className="footer-logo-desc">
             <Link to="/" className="logo">
-              <div className="logo-icon">I</div>
+              <div className="logo-icon">S</div>
               <div className="logo-text">
-                IndoGlobal<span>Exim</span>
+                SecureAgri<span>Impex</span>
               </div>
             </Link>
             <p className="footer-desc">
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
             <div className="footer-contact-item">
               <Mail size={18} />
-              <span>info@indoglobalexim.com</span>
+              <span>info@secureagriimpex.com</span>
             </div>
           </div>
         </div>

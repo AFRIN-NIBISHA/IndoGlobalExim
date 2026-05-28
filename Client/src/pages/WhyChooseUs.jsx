@@ -114,7 +114,7 @@ const WhyChooseUs = () => {
                 {lang === "ta" ? "எங்கள் தரக் கட்டுப்பாட்டு நெறிமுறைகள்" : "Our International Quality Protocols"}
               </h2>
               <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", marginBottom: "2rem" }}>
-                International trade relies on consistency. At IndoGlobal Exim, we have set strict control checklists from harvest to loading. We ensure that our buyers receive exactly what is described in the contract spec sheets.
+                International trade relies on consistency. At SecureAgri Impex, we have set strict control checklists from harvest to loading. We ensure that our buyers receive exactly what is described in the contract spec sheets.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>

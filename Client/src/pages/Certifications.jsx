@@ -119,7 +119,7 @@ const Certifications = () => {
             <div class="subtitle">Official Verification Document for Export Clearance</div>
             
             <div class="body-text">
-              This certifies that the export enterprise <strong>INDO GLOBAL EXIM CO.</strong>, located at Chennai, Tamil Nadu, India, has been duly inspected and registered with the respective authority. All compliance checklists, facility safety measures, and quality norms have been met in accordance with legal directives.
+              This certifies that the export enterprise <strong>SECUREAGRI IMPEX CO.</strong>, located at Chennai, Tamil Nadu, India, has been duly inspected and registered with the respective authority. All compliance checklists, facility safety measures, and quality norms have been met in accordance with legal directives.
             </div>
 
             <table class="info-table">
@@ -131,7 +131,7 @@ const Certifications = () => {
 
             <div class="footer-sign">
               <div class="sign-line">Directorate Stamp / Seal</div>
-              <div class="sign-line">Authorized Signatory<br>IndoGlobal Exim Desk</div>
+              <div class="sign-line">Authorized Signatory<br>SecureAgri Impex Desk</div>
             </div>
           </div>
           <script>

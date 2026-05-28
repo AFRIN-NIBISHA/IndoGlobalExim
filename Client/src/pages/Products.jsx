@@ -26,16 +26,31 @@ const Products = () => {
 
   // Image mappings to locally generated high-quality assets and clean Unsplash fallbacks
   const productImageMap = {
-    "spices-cardamom": "/cardamom.png",
-    "spices-turmeric": "/turmeric.png",
-    "rice-basmati": "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop",
+    // Basmati Rice
+    "rice-basmati-1121": "/basmati_grain.png",
+
+    // Non-Basmati Rice
     "rice-ponni": "/ponni_rice.png",
-    "garments-tshirts": "/garments.png",
-    "coir-pith": "/coir_pith.png",
-    "handicrafts-wooden": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
-    "agri-onion": "/red_onion.png",
-    "agri-coconut": "/coconut.png",
-    "machinery-agro": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+    "rice-sona-masoori": "/ponni_rice.png",
+    "rice-idli": "/idli_rice.png",
+    "rice-jeera": "/idli_rice.png",
+    "rice-white": "/ponni_rice.png",
+    "rice-boiled": "/ponni_rice.png",
+
+    // Organic Rice
+    "rice-matta": "/red_rice.png",
+    "rice-brown": "/brown_rice.png",
+    "rice-black": "/black_rice.png",
+
+    // Fresh Coconuts
+    "coconut-fresh-semihusked": "/coconut.png",
+    "coconut-fresh-fullyhusked": "/fully_husked.png",
+    "coconut-fresh-mature": "/coconut.png",
+    "coconut-fresh-tender": "/tender_coconut.png",
+    "coconut-fresh-copra": "/coconut.png",
+
+    // Coconut By-Products
+    "coconut-by-cocopeat": "/coir_pith.png"
   };
 
   // Filter products based on Category and Search Query
@@ -97,7 +112,7 @@ const Products = () => {
         </head>
         <body>
           <div class="header-banner">
-            <div class="logo">IndoGlobal<span>Exim</span></div>
+            <div class="logo">SecureAgri<span>Impex</span></div>
             <div class="badge-title">OFFICIAL EXPORT DATASHEET</div>
           </div>
           
@@ -131,11 +146,11 @@ const Products = () => {
           </table>
 
           <div class="disclaimer-box">
-            <strong>Standard Export Warranty:</strong> All merchandise is rigorously inspected at load-ports under global guidelines. IndoGlobal Exim supplies verified Phytosanitary certifications, Custom Health documents, and SGS verification reports as requested by letters of credit.
+            <strong>Standard Export Warranty:</strong> All merchandise is rigorously inspected at load-ports under global guidelines. SecureAgri Impex supplies verified Phytosanitary certifications, Custom Health documents, and SGS verification reports as requested by letters of credit.
           </div>
 
           <div class="footer-info">
-            IndoGlobal Exim Co. | Guindy Industrial Estate, Chennai, India | Phone: +91 88707 78542 | Email: info@indoglobalexim.com
+            SecureAgri Impex Co. | Guindy Industrial Estate, Chennai, India | Phone: +91 88707 78542 | Email: info@secureagriimpex.com
           </div>
 
           <script>

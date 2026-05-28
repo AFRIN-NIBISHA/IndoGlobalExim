@@ -47,7 +47,7 @@ const PolicyPages = () => {
 
             <h2>1. Trade Agreement & Offers</h2>
             <p>
-              All quotations, prices listed, or catalog metrics are invitations to treat. Contractual obligations are only established when an official Proforma Invoice (PI) is signed by both the buyer and IndoGlobal Exim, accompanied by a confirmed deposit or an active Letter of Credit (L/C).
+              All quotations, prices listed, or catalog metrics are invitations to treat. Contractual obligations are only established when an official Proforma Invoice (PI) is signed by both the buyer and SecureAgri Impex, accompanied by a confirmed deposit or an active Letter of Credit (L/C).
             </p>
 
             <h2>2. Pricing & Currency</h2>
@@ -57,12 +57,12 @@ const PolicyPages = () => {
 
             <h2>3. Governing Law & Arbitration</h2>
             <p>
-              Any disputes, quality conflicts, or transit delays arising under contracts signed with IndoGlobal Exim will be governed by Indian laws. Disputes will be referred to exclusive arbitration in Chennai, Tamil Nadu, India, under the rules of the Indian Arbitration and Conciliation Act.
+              Any disputes, quality conflicts, or transit delays arising under contracts signed with SecureAgri Impex will be governed by Indian laws. Disputes will be referred to exclusive arbitration in Chennai, Tamil Nadu, India, under the rules of the Indian Arbitration and Conciliation Act.
             </p>
 
             <h2>4. Buyer Duty</h2>
             <p>
-              Buyers must check that the goods comply with import guidelines in their discharge countries (such as pesticide levels, import licenses, and packing markings). IndoGlobal Exim is not liable for cargo rejected by destination customs due to missing buyer-side import filings.
+              Buyers must check that the goods comply with import guidelines in their discharge countries (such as pesticide levels, import licenses, and packing markings). SecureAgri Impex is not liable for cargo rejected by destination customs due to missing buyer-side import filings.
             </p>
           </>
         );
@@ -100,7 +100,7 @@ const PolicyPages = () => {
 
             <h2>4. Demurrage & Detention</h2>
             <p>
-              IndoGlobal Exim is responsible for customs clearance and port logistics at the load ports in India. Destinational customs clearance, import tariffs, and container demurrage charges at the port of discharge are solely to the account of the buyer.
+              SecureAgri Impex is responsible for customs clearance and port logistics at the load ports in India. Destinational customs clearance, import tariffs, and container demurrage charges at the port of discharge are solely to the account of the buyer.
             </p>
           </>
         );
@@ -114,7 +114,7 @@ const PolicyPages = () => {
 
             <h2>1. Quality Claims & Inspections</h2>
             <p>
-              Buyers must inspect the cargo immediately upon arrival at the port of discharge. Any claims regarding quality variance, weight deficits, moisture issues, or damage must be filed in writing to IndoGlobal Exim within 14 calendar days of container arrival.
+              Buyers must inspect the cargo immediately upon arrival at the port of discharge. Any claims regarding quality variance, weight deficits, moisture issues, or damage must be filed in writing to SecureAgri Impex within 14 calendar days of container arrival.
             </p>
 
             <h2>2. Joint Survey Audits</h2>
@@ -124,7 +124,7 @@ const PolicyPages = () => {
 
             <h2>3. Compensation & Adjustments</h2>
             <p>
-              If a claim is validated by the joint surveyor inspection, IndoGlobal Exim will resolve the issue through:
+              If a claim is validated by the joint surveyor inspection, SecureAgri Impex will resolve the issue through:
             </p>
             <ul>
               <li>A direct credit note applied to the buyer's next shipment.</li>

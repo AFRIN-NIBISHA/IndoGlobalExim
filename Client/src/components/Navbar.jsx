@@ -26,9 +26,9 @@ const Navbar = () => {
         <div className="container navbar">
           {/* Logo */}
           <Link to="/" className="logo" onClick={closeMenu}>
-            <div className="logo-icon">I</div>
+            <div className="logo-icon">S</div>
             <div className="logo-text">
-              IndoGlobal<span>Exim</span>
+              SecureAgri<span>Impex</span>
             </div>
           </Link>
 

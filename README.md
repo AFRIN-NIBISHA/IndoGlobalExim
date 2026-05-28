@@ -1,6 +1,6 @@
-# IndoGlobal Exim
+# SecureAgri Impex
 
-A premium, elegant, and fully responsive export business website for **IndoGlobal Exim** built with **React (Vite)** and **Vanilla CSS**. Features English and Tamil localization, multi-currency converter, automated PDF brochure downloader, printable registration certificates, simulated live chat assistant, and floating WhatsApp support.
+A premium, elegant, and fully responsive export business website for **SecureAgri Impex** built with **React (Vite)** and **Vanilla CSS**. Features English and Tamil localization, multi-currency converter, automated PDF brochure downloader, printable registration certificates, simulated live chat assistant, and floating WhatsApp support.
 
 ## 🚀 Features
 

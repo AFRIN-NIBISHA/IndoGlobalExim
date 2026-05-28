@@ -18,7 +18,7 @@ export const translations = {
     statsSupport: "Client Support",
 
     companyIntroTitle: "Trusted Global Trade Partner",
-    companyIntroDesc1: "IndoGlobal Exim is a premier multi-commodity export enterprise based in India. We specialize in sourcing and delivering export-grade agricultural produce, high-quality garments, sustainable coir materials, and premium handicrafts directly to international buyers.",
+    companyIntroDesc1: "SecureAgri Impex is a premier multi-commodity export enterprise based in India. We specialize in sourcing and delivering export-grade agricultural produce, high-quality garments, sustainable coir materials, and premium handicrafts directly to international buyers.",
     companyIntroDesc2: "Built on principles of integrity, quality assurance, and streamlined logistics, we bridge the gap between Indian farmers & artisans and the global marketplace. We ensure all shipments meet strict international food safety and quality compliance guidelines.",
     
     productHighlights: "Product Highlights",
@@ -29,7 +29,7 @@ export const translations = {
     testimonialsTitle: "What Our Global Clients Say",
     
     aboutStoryTitle: "Our Story",
-    aboutStoryText: "IndoGlobal Exim was founded with a singular vision: to bring India's rich bounty of natural agricultural products and skilled craftsmanship to the global stage. From our humble beginnings in domestic sourcing, we have scaled our operations to establish robust export lines to the Middle East, Southeast Asia, Europe, and North America. Today, we partner with certified organic farmers and state-of-the-art processing units to offer top-tier products.",
+    aboutStoryText: "SecureAgri Impex was founded with a singular vision: to bring India's rich bounty of natural agricultural products and skilled craftsmanship to the global stage. From our humble beginnings in domestic sourcing, we have scaled our operations to establish robust export lines to the Middle East, Southeast Asia, Europe, and North America. Today, we partner with certified organic farmers and state-of-the-art processing units to offer top-tier products.",
     founderVisionTitle: "Founder's Vision",
     founderVisionText: "To build a transparent, efficient, and sustainable export network that empowers local Indian producers while delivering absolute purity, reliability, and value to international buyers. We aim to become the first choice for bulk sourcing in agricultural and industrial sectors.",
     missionTitle: "Our Mission",
@@ -43,6 +43,12 @@ export const translations = {
     productsTitle: "Our Export Catalog",
     productsSubtitle: "Explore our wide range of premium products sourced directly from selected regions in India. High-quality standards, strict packaging, and flexible MOQ.",
     filterAll: "All Categories",
+    catBasmati: "Basmati Rice",
+    catNonBasmati: "Non-Basmati Rice",
+    catOrganicRice: "Traditional & Organic Rice",
+    catFreshCoconut: "Fresh Coconuts",
+    catCoconutProducts: "Coconut Products",
+    catCoconutByproducts: "Coconut By-Products",
     moqLabel: "Minimum Order Quantity",
     packagingLabel: "Packaging Details",
     originLabel: "Origin",
@@ -57,7 +63,7 @@ export const translations = {
     certificationsSubtitle: "We maintain 100% legal compliance with Indian and international regulatory authorities to guarantee secure and certified exports.",
     certVerification: "Verified Registration Proof",
 
-    whyTitle: "Why Choose IndoGlobal Exim?",
+    whyTitle: "Why Choose SecureAgri Impex?",
     whySubtitle: "We prioritize excellence at every stage of the supply chain, ensuring a hassle-free import experience for our international buyers.",
     whyQ1: "Premium Quality Guarantee",
     whyQD1: "Rigorous quality checks at sourcing, sorting, and packaging phases to meet international quality standards.",
@@ -73,7 +79,7 @@ export const translations = {
     whyQD6: "Compliance with safe payment structures including Letter of Credit (L/C) and Telegraphic Transfer (T/T).",
 
     contactTitle: "Get in Touch for Bulk Orders",
-    contactSubtitle: "Partner with IndoGlobal Exim today. Send us your requirements, and our sales team will respond with a quote within 12 hours.",
+    contactSubtitle: "Partner with SecureAgri Impex today. Send us your requirements, and our sales team will respond with a quote within 12 hours.",
     addressLabel: "Corporate Office Address",
     emailLabel: "Email Address",
     phoneLabel: "Call / WhatsApp",
@@ -90,13 +96,13 @@ export const translations = {
     whatsappCTA: "Chat with Sales on WhatsApp",
     faqTitle: "Frequently Asked Questions (FAQ)",
 
-    footerCopyright: "© 2026 IndoGlobal Exim. All Rights Reserved. Powered by IndoGlobal Exim Group.",
+    footerCopyright: "© 2026 SecureAgri Impex. All Rights Reserved. Powered by SecureAgri Impex Group.",
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms & Conditions",
     footerShipping: "Shipping & Logistics Policy",
     footerRefund: "Refund & Claim Policy",
 
-    chatWelcome: "Hello! Welcome to IndoGlobal Exim. How can we help you with bulk imports today?",
+    chatWelcome: "Hello! Welcome to SecureAgri Impex. How can we help you with bulk imports today?",
     chatFAQ1: "What is the typical shipping lead time?",
     chatFAQ2: "Can you provide product samples?",
     chatFAQ3: "What are your payment terms?",
@@ -123,7 +129,7 @@ export const translations = {
     statsSupport: "வாடிக்கையாளர் ஆதரவு",
 
     companyIntroTitle: "நம்பகமான உலகளாவிய வர்த்தக கூட்டாளி",
-    companyIntroDesc1: "இண்டோகுளோபல் எக்ஸிம் (IndoGlobal Exim) என்பது இந்தியாவில் உள்ள ஒரு முன்னணி ஏற்றுமதி நிறுவனமாகும். விவசாயப் பொருட்கள், உயர்தர ஆடைகள், சூழல் நட்பு தேங்காய் நார் பொருட்கள் மற்றும் பிரீமியம் கைவினைப்பொருட்களை நேரடியாக உலகளாவிய வாங்குபவர்களுக்கு வழங்குவதில் நாங்கள் நிபுணத்துவம் பெற்றுள்ளோம்.",
+    companyIntroDesc1: "செக்யூர்அக்ரி இம்பெக்ஸ் (SecureAgri Impex) என்பது இந்தியாவில் உள்ள ஒரு முன்னணி ஏற்றுமதி நிறுவனமாகும். விவசாயப் பொருட்கள், உயர்தர ஆடைகள், சூழல் நட்பு தேங்காய் நார் பொருட்கள் மற்றும் பிரீமியம் கைவினைப்பொருட்களை நேரடியாக உலகளாவிய வாங்குபவர்களுக்கு வழங்குவதில் நாங்கள் நிபுணத்துவம் பெற்றுள்ளோம்.",
     companyIntroDesc2: "நேர்மை, தர உத்தரவாதம் மற்றும் நெறிப்படுத்தப்பட்ட தளவாடங்கள் ஆகியவற்றின் அடிப்படையில் கட்டமைக்கப்பட்ட நாங்கள், இந்திய விவசாயிகள் மற்றும் கைவினைஞர்களுக்கும் உலகளாவிய சந்தைக்கும் இடையே ஒரு பாலமாக செயல்படுகிறோம். அனைத்து ஏற்றுமதிகளும் சர்வதேச உணவு பாதுகாப்பு மற்றும் தர விதிமுறைகளை பூர்த்தி செய்வதை நாங்கள் உறுதி செய்கிறோம்.",
     
     productHighlights: "சிறப்பு தயாரிப்புகள்",
@@ -134,7 +140,7 @@ export const translations = {
     testimonialsTitle: "எங்கள் உலகளாவிய வாடிக்கையாளர்களின் கருத்துக்கள்",
     
     aboutStoryTitle: "எங்கள் கதை",
-    aboutStoryText: "இந்தியாவின் வளமான இயற்கை விவசாயப் பொருட்கள் மற்றும் கைவினைத் திறனை உலக அரங்கிற்கு கொண்டு செல்ல வேண்டும் என்ற ஒரே நோக்கத்துடன் இண்டோகுளோபல் எக்ஸிம் தொடங்கப்பட்டது. உள்நாட்டு கொள்முதலில் எங்களது பயணத்தைத் தொடங்கி, இன்று மத்திய கிழக்கு, தென்கிழக்கு ஆசியா, ஐரோப்பா மற்றும் வட அமெரிக்கா ஆகிய நாடுகளுக்கு வலுவான ஏற்றுமதி வழிகளை நிறுவியுள்ளோம். நாங்கள் சான்றளிக்கப்பட்ட இயற்கை விவசாயிகள் மற்றும் அதிநவீன செயலாக்க அலகுகளுடன் கூட்டு சேர்ந்து உயர்தர தயாரிப்புகளை வழங்குகிறோம்.",
+    aboutStoryText: "இந்தியாவின் வளமான இயற்கை விவசாயப் பொருட்கள் மற்றும் கைவினைத் திறனை உலக அரங்கிற்கு கொண்டு செல்ல வேண்டும் என்ற ஒரே நோக்கத்துடன் செக்யூர்அக்ரி இம்பெக்ஸ் தொடங்கப்பட்டது. உள்நாட்டு கொள்முதலில் எங்களது பயணத்தைத் தொடங்கி, இன்று மத்திய கிழக்கு, தென்கிழக்கு ஆசியா, ஐரோப்பா மற்றும் வட அமெரிக்கா ஆகிய நாடுகளுக்கு வலுவான ஏற்றுமதி வழிகளை நிறுவியுள்ளோம். நாங்கள் சான்றளிக்கப்பட்ட இயற்கை விவசாயிகள் மற்றும் அதிநவீன செயலாக்க அலகுகளுடன் கூட்டு சேர்ந்து உயர்தர தயாரிப்புகளை வழங்குகிறோம்.",
     founderVisionTitle: "நிறுவனரின் தொலைநோக்கு",
     founderVisionText: "இந்தியாவின் உள்ளூர் உற்பத்தியாளர்களை ஊக்குவிக்கும் அதே வேளையில், சர்வதேச வாங்குபவர்களுக்கு முழுமையான தூய்மை, நம்பகத்தன்மை மற்றும் மதிப்பை வழங்கும் ஒரு வெளிப்படையான, திறமையான மற்றும் நிலையான ஏற்றுமதி வலையமைப்பை உருவாக்குவது. விவசாய மற்றும் தொழில்துறை துறைகளில் மொத்த கொள்முதலுக்கான சிறந்த தேர்வாக மாறுவதை நாங்கள் நோக்கமாகக் கொண்டுள்ளோம்.",
     missionTitle: "எங்கள் லட்சியம்",
@@ -148,6 +154,12 @@ export const translations = {
     productsTitle: "எங்கள் ஏற்றுமதி தயாரிப்புகள்",
     productsSubtitle: "இந்தியாவின் தேர்ந்தெடுக்கப்பட்ட பகுதிகளில் இருந்து நேரடியாக பெறப்பட்ட எங்களது பிரீமியம் தயாரிப்புகளை ஆராயுங்கள். உயர்தர தரநிலைகள், பாதுகாப்பான பேக்கேஜிங் மற்றும் நெகிழ்வான குறைந்தபட்ச ஆர்டர் அளவு (MOQ).",
     filterAll: "அனைத்து பிரிவுகளும்",
+    catBasmati: "பாசுமதி அரிசி",
+    catNonBasmati: "இன்ன பிற அரிசி வகைகள்",
+    catOrganicRice: "பாரம்பரிய & ஆர்கானிக் அரிசி",
+    catFreshCoconut: "புதிய தேங்காய் வகைகள்",
+    catCoconutProducts: "தேங்காய் தயாரிப்புகள்",
+    catCoconutByproducts: "தேங்காய் நார் & பிற பொருட்கள்",
     moqLabel: "குறைந்தபட்ச ஆர்டர் அளவு",
     packagingLabel: "பேக்கேஜிங் விவரங்கள்",
     originLabel: "உற்பத்தி இடம்",
@@ -162,7 +174,7 @@ export const translations = {
     certificationsSubtitle: "பாதுகாப்பான மற்றும் சான்றளிக்கப்பட்ட ஏற்றுமதிகளுக்கு உத்தரவாதம் அளிக்க இந்திய மற்றும் சர்வதேச ஒழுங்குமுறை அதிகாரிகளுடன் 100% சட்டப்பூர்வ இணக்கத்தை நாங்கள் பராமரிக்கிறோம்.",
     certVerification: "சரிபார்க்கப்பட்ட பதிவு சான்று",
 
-    whyTitle: "ஏன் இண்டோகுளோபல் எக்ஸிம்?",
+    whyTitle: "ஏன் செக்யூர்அக்ரி இம்பெக்ஸ்?",
     whySubtitle: "விநியோகச் சங்கிலியின் ஒவ்வொரு கட்டத்திலும் நாங்கள் சிறந்து விளங்குவதற்கு முன்னுரிமை அளிக்கிறோம், எங்கள் சர்வதேச வாங்குபவர்களுக்கு தொந்தரவு இல்லாத இறக்குமதி அனுபவத்தை உறுதிசெய்கிறோம்.",
     whyQ1: "உத்தரவாதமான பிரீமியம் தரம்",
     whyQD1: "சர்வதேச தரத்தை பூர்த்தி செய்வதற்காக தயாரிப்புகள் கொள்முதல் செய்தல், தரம் பிரித்தல் மற்றும் பேக்கிங் ஆகிய நிலைகளில் கடுமையான தர சோதனைகள்.",
@@ -178,7 +190,7 @@ export const translations = {
     whyQD6: "கடன் கடிதம் (L/C) மற்றும் தந்தி பரிமாற்றம் (T/T) உள்ளிட்ட பாதுகாப்பான சர்வதேச கட்டண முறைகளுக்கு இணங்குதல்.",
 
     contactTitle: "மொத்த ஆர்டர்களுக்கு எங்களை தொடர்பு கொள்ளவும்",
-    contactSubtitle: "இன்று இண்டோகுளோபல் எக்ஸிம் உடன் இணையுங்கள். உங்கள் தேவைகளை எங்களுக்கு அனுப்புங்கள், எங்களது விற்பனை குழு 12 மணி நேரத்திற்குள் உங்களுக்கு பதில் அளிக்கும்.",
+    contactSubtitle: "இன்று செக்யூர்அக்ரி இம்பெக்ஸ் உடன் இணையுங்கள். உங்கள் தேவைகளை எங்களுக்கு அனுப்புங்கள், எங்களது விற்பனை குழு 12 மணி நேரத்திற்குள் உங்களுக்கு பதில் அளிக்கும்.",
     addressLabel: "நிறுவன அலுவலக முகவரி",
     emailLabel: "மின்னஞ்சல் முகவரி",
     phoneLabel: "அழைப்பு / வாட்ஸ்அப்",
@@ -195,13 +207,13 @@ export const translations = {
     whatsappCTA: "வாட்ஸ்அப்பில் விற்பனை பிரிவுடன் பேசவும்",
     faqTitle: "அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ)",
 
-    footerCopyright: "© 2026 இண்டோகுளோபல் எக்ஸிம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+    footerCopyright: "© 2026 செக்யூர்அக்ரி இம்பெக்ஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
     footerPrivacy: "தனியுரிமைக் கொள்கை",
     footerTerms: "விதிமுறைகள் மற்றும் நிபந்தனைகள்",
     footerShipping: "கப்பல் மற்றும் தளவாடக் கொள்கை",
     footerRefund: "திரும்பப் பெறுதல் கொள்கை",
 
-    chatWelcome: "வணக்கம்! இண்டோகுளோபல் எக்ஸிம் நிறுவனத்திற்கு உங்களை வரவேற்கிறோம். மொத்த இறக்குமதிக்கு நாங்கள் உங்களுக்கு எவ்வாறு உதவலாம்?",
+    chatWelcome: "வணக்கம்! செக்யூர்அக்ரி இம்பெக்ஸ் நிறுவனத்திற்கு உங்களை வரவேற்கிறோம். மொத்த இறக்குமதிக்கு நாங்கள் உங்களுக்கு எவ்வாறு உதவலாம்?",
     chatFAQ1: "வழக்கமான விநியோக காலம் எவ்வளவு?",
     chatFAQ2: "தயாரிப்பு மாதிரிகள் (Samples) வழங்க முடியுமா?",
     chatFAQ3: "பணம் செலுத்தும் முறைகள் என்ன?",

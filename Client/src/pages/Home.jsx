@@ -16,25 +16,26 @@ const Home = () => {
 
   const highlights = [
     {
-      id: "spices-cardamom",
-      nameKey: "Premium Green Cardamom",
-      cat: "Spices",
-      img: "/cardamom.png",
-      descEn: "Aromatic extra bold cardamom from the spice hills of Kerala.",
-      descTa: "கேரளாவின் நறுமணமிக்க உயர்தர ஏலக்காய் வகைகள்."
+      id: "rice-basmati-1121",
+      nameKey: "Basmati Rice",
+      nameTa: "பாசுமதி அரிசி",
+      cat: "Basmati Rice",
+      img: "/basmati_grain.png",
+      descEn: "World-famous extra-long aromatic grain rice, aged to perfection.",
+      descTa: "உலகப் புகழ்பெற்ற கூடுதல் நீளமான பாசுமதி அரிசி. சமைத்தவுடன் உதிரியாக மாறும்."
     },
     {
-      id: "rice-basmati",
-      nameKey: "Premium 1121 Sella Basmati Rice",
-      cat: "Rice",
-      img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=600&auto=format&fit=crop",
-      descEn: "Extra long grain aged Basmati Rice with rich aroma.",
-      descTa: "நீளமாகவும், உதிரியாகவும் இருக்கும் பாரம்பரிய பாசுமதி அரிசி."
+      id: "coconut-fresh-semihusked",
+      nameKey: "Semi Husked Coconut",
+      cat: "Fresh Coconuts",
+      img: "/coconut.png",
+      descEn: "Premium fresh semi-husked coconuts from Pollachi, rich in oil.",
+      descTa: "பொள்ளாச்சி பகுதியில் இருந்து பெறப்பட்ட நாரோடி உரித்த உயர்தர தேங்காய்கள்."
     },
     {
-      id: "coir-pith",
+      id: "coconut-by-cocopeat",
       nameKey: "Coco Peat 5Kg Blocks",
-      cat: "Coir Products",
+      cat: "Coconut By-Products",
       img: "/coir_pith.png",
       descEn: "High water retention organic coco peat blocks from Pollachi.",
       descTa: "பொள்ளாச்சியின் சிறந்த தேங்காய் நார்க்கழிவு உரக் கட்டிகள்."
@@ -43,7 +44,7 @@ const Home = () => {
 
   const testimonials = [
     {
-      quote: "Excellent product quality and fast shipping. IndoGlobal Exim has been our trusted supplier for Basmati Rice and Cardamom in the GCC region for over 3 years.",
+      quote: "Excellent product quality and fast shipping. SecureAgri Impex has been our trusted supplier for Basmati Rice and Cardamom in the GCC region for over 3 years.",
       client: "Al-Hamad Foods Trading Co.",
       country: "Dubai, UAE",
       stars: 5
@@ -138,7 +139,7 @@ const Home = () => {
               <div className="img-frame">
                 <img
                   src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
-                  alt="IndoGlobal Exim Warehouse and Logistics"
+                  alt="SecureAgri Impex Warehouse and Logistics"
                 />
               </div>
             </div>

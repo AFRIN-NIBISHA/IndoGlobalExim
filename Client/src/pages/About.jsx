@@ -35,39 +35,25 @@ const About = () => {
 
   const timeline = [
     {
-      year: "2018",
+      year: "2024",
       titleEn: "Company Foundation",
       titleTa: "நிறுவனம் தொடக்கம்",
-      descEn: "Established in Chennai, India, starting with domestic agricultural sourcing and processing networks.",
-      descTa: "விவசாய கொள்முதல் மற்றும் செயலாக்க நெட்வொர்க்குகளுடன் சென்னையில் தொடங்கப்பட்டது."
+      descEn: "Founded in Chennai, India, with a core mission to connect local farmers and premium spice & rice producers to international markets.",
+      descTa: "உள்ளூர் விவசாயிகள் மற்றும் பிரீமியம் உற்பத்தியாளர்களை சர்வதேச சந்தையுடன் இணைக்கும் நோக்கத்துடன் சென்னையில் தொடங்கப்பட்டது."
     },
     {
-      year: "2020",
-      titleEn: "First International Shipment",
-      titleTa: "முதல் சர்வதேச ஏற்றுமதி",
-      descEn: "Dispatched our first full container load (FCL) of Sella Basmati Rice and Turmeric to Dubai, UAE.",
-      descTa: "ஐக்கிய அரபு அமீரகத்திற்கு (Dubai) எங்களது முதல் கொள்கலன் (FCL) அரிசி மற்றும் மஞ்சள் ஏற்றுமதி செய்யப்பட்டது."
-    },
-    {
-      year: "2022",
-      titleEn: "Regulatory Certifications",
-      titleTa: "ஒழுங்குமுறை சான்றிதழ்கள்",
-      descEn: "Acquired official FSSAI, APEDA, ISO 9001:2015, and Organic certificates for international grade compliance.",
-      descTa: "சர்வதேச தர இணக்கத்திற்காக FSSAI, APEDA, ISO 9001:2015 மற்றும் இயற்கை சான்றிதழ்களைப் பெற்றது."
-    },
-    {
-      year: "2024",
-      titleEn: "Global Footprint Expansion",
-      titleTa: "உலகளாவிய விரிவாக்கம்",
-      descEn: "Expanded regular exports to USA, UK, Singapore, and Canada, introducing organic cotton garments and coco peat blocks.",
-      descTa: "ஆர்கானிக் ஆடைகள் மற்றும் தேங்காய் நார் கழிவுகளை அறிமுகப்படுத்தி அமெரிக்கா, இங்கிலாந்து, சிங்கப்பூருக்கு ஏற்றுமதி விரிவாக்கம்."
+      year: "2025",
+      titleEn: "Certifications & Setup",
+      titleTa: "சான்றிதழ்கள் மற்றும் முதல் ஏற்றுமதி",
+      descEn: "Acquired official FSSAI, APEDA, ISO 9001:2015 quality credentials and executed our first container shipments of Basmati Rice to the GCC region.",
+      descTa: "FSSAI, APEDA, ISO 9001:2015 சான்றிதழ்களைப் பெற்று, வளைகுடா நாடுகளுக்கு எங்களது முதல் கொள்கலன் பாசுமதி அரிசி ஏற்றுமதியைத் தொடங்கியது."
     },
     {
       year: "2026",
-      titleEn: "Advanced Packing Centers",
-      titleTa: "அதிநவீன பேக்கிங் மையங்கள்",
-      descEn: "Inaugurating cold storage and vacuum-packaging warehouses near Tuticorin and Cochin ports to guarantee maximum shelf life.",
-      descTa: "அதிகபட்ச அடுக்கு ஆயுளுக்கு தூத்துக்குடி மற்றும் கொச்சி துறைமுகங்கள் அருகே குளிர்சாதன மற்றும் வெற்றிட பேக்கேஜிங் கிடங்குகள் அமைப்பு."
+      titleEn: "Global Expansion & Smart Packing",
+      titleTa: "உலகளாவிய விரிவாக்கம் & பேக்கிங் வசதிகள்",
+      descEn: "Expanding regular exports to the USA, Europe, and Southeast Asia. Inaugurating advanced vacuum packing and cold storage warehousing near Major Ports.",
+      descTa: "அமெரிக்கா, ஐரோப்பா மற்றும் தென்கிழக்கு ஆசியாவிற்கு ஏற்றுமதியை விரிவாக்கம் செய்து, முக்கிய துறைமுகங்கள் அருகே அதிநவீன வெற்றிட பேக்கேஜிங் கிடங்குகளை அமைத்தல்."
     }
   ];
 
@@ -80,7 +66,7 @@ const About = () => {
             {t("navAbout")}
           </h1>
           <p style={{ color: "var(--accent)", fontWeight: "600", letterSpacing: "1px", textTransform: "uppercase" }}>
-            IndoGlobal Exim — Delivering Pure Excellence Since 2018
+            SecureAgri Impex — Delivering Pure Excellence Since 2024
           </p>
         </div>
       </section>
@@ -130,7 +116,7 @@ const About = () => {
                 <p style={{ fontStyle: "italic", color: "var(--primary)", fontWeight: "500", marginBottom: "0.5rem" }}>
                   “We don't just export commodities; we build enduring international trust and deliver the rich heritage of Indian quality.”
                 </p>
-                <strong>- Founder & Managing Director, IndoGlobal Exim</strong>
+                <strong>- Founder & Managing Director, SecureAgri Impex</strong>
               </div>
             </div>
             <div className="info-col-img">
@@ -150,7 +136,7 @@ const About = () => {
         <div className="container">
           <div className="section-header">
             <h2>{t("valuesTitle")}</h2>
-            <p>{lang === "ta" ? "நேர்மையான மற்றும் பாதுகாப்பான ஏற்றுமதி வர்த்தகத்திற்கான எங்களது தூண்கள்." : "The founding principles that guide every shipment and transaction at IndoGlobal Exim."}</p>
+            <p>{lang === "ta" ? "நேர்மையான மற்றும் பாதுகாப்பான ஏற்றுமதி வர்த்தகத்திற்கான எங்களது தூண்கள்." : "The founding principles that guide every shipment and transaction at SecureAgri Impex."}</p>
           </div>
 
           <div className="grid grid-2">
