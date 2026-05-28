@@ -66,21 +66,21 @@ const InquiryForm = ({ initialProduct = "" }) => {
           console.error("EmailJS sending failed:", error);
         });
     } else {
-      // Clean HTML Table fallback email via FormSubmit (Direct to afrinnibisha65@gmail.com securely)
-      const formToken = "41b8aab6c0238a65089b5c025e1ea545";
-      emailPromise = fetch(`https://formsubmit.co/ajax/${formToken}`, {
+      // Clean HTML Table fallback email via FormSubmit (Direct to afrinnibisha65@gmail.com)
+      const targetEmail = "afrinnibisha65@gmail.com";
+      emailPromise = fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          _subject: `New Bulk Inquiry from ${formData.name} - SecureAgri Impex`,
+          _subject: `New Bulk Inquiry: ${formData.product || "General"} - SecureAgri Impex`,
           _captcha: "false",
           _template: "table", // Renders structured HTML table instead of plain list
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          product: formData.product || "Not Specified",
-          quantity: formData.quantity || "Not Specified",
-          message: formData.message || "No message provided."
+          "Client Name / Company": formData.name,
+          "Email Address": formData.email,
+          "Phone / WhatsApp": formData.phone,
+          "Selected Product": formData.product || "Not Specified",
+          "Order Quantity": formData.quantity || "Not Specified",
+          "Special Requirements": formData.message || "No message provided."
         })
       })
         .then((res) => res.json())
