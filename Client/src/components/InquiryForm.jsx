@@ -66,8 +66,8 @@ const InquiryForm = ({ initialProduct = "" }) => {
           console.error("EmailJS sending failed:", error);
         });
     } else {
-      // Clean HTML Table fallback email via FormSubmit (Direct to afrinnibisha65@gmail.com)
-      const targetEmail = "afrinnibisha65@gmail.com";
+      // Clean HTML Table fallback email via FormSubmit (Direct to info@secureagri.com)
+      const targetEmail = "info@secureagri.com";
       emailPromise = fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
