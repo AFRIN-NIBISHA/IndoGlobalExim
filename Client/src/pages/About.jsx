@@ -116,7 +116,7 @@ const About = () => {
                 <p style={{ fontStyle: "italic", color: "var(--primary)", fontWeight: "500", marginBottom: "0.5rem" }}>
                   “We don't just export commodities; we build enduring international trust and deliver the rich heritage of Indian quality.”
                 </p>
-                <strong>- Founder & Managing Director, SecureAgri Impex</strong>
+                <strong>- Georshan, Founder & Managing Director, SecureAgri Impex</strong>
               </div>
             </div>
             <div className="info-col-img">
