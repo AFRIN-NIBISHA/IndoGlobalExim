@@ -12,10 +12,10 @@ export const translations = {
     btnGetQuote: "Get Bulk Quote",
     btnContactUs: "Contact Us",
 
-    statsCountries: "Countries Supplied",
-    statsProducts: "Product Categories",
-    statsDelivery: "Timely Delivery Rate",
-    statsSupport: "Client Support",
+    statsCountries: "Direct Farm Networks",
+    statsProducts: "Premium Products",
+    statsDelivery: "Quality Audit Rate",
+    statsSupport: "Dedicated Support",
 
     companyIntroTitle: "Trusted Global Trade Partner",
     companyIntroDesc1: "SecureAgri Impex is a premier multi-commodity export enterprise based in India. We specialize in sourcing and delivering export-grade agricultural produce, high-quality garments, sustainable coir materials, and premium handicrafts directly to international buyers.",
@@ -24,7 +24,7 @@ export const translations = {
     productHighlights: "Product Highlights",
     viewAllProducts: "View All Products",
     countriesTitle: "Our Global Shipping Footprint",
-    countriesSubtitle: "We supply premium Indian goods across major global trade corridors with end-to-end container tracking.",
+    countriesSubtitle: "Fully equipped to ship premium Indian goods across major global trade corridors with end-to-end container tracking.",
     
     testimonialsTitle: "What Our Global Clients Say",
     
@@ -123,10 +123,10 @@ export const translations = {
     btnGetQuote: "மொத்த விலைப் பட்டியல் பெற",
     btnContactUs: "எங்களைத் தொடர்பு கொள்க",
 
-    statsCountries: "வழங்கப்படும் நாடுகள்",
-    statsProducts: "தயாரிப்பு வகைகள்",
-    statsDelivery: "சரியான நேர விநியோகம்",
-    statsSupport: "வாடிக்கையாளர் ஆதரவு",
+    statsCountries: "நேரடி விவசாய நெட்வொர்க்குகள்",
+    statsProducts: "பிரீமியம் தயாரிப்புகள்",
+    statsDelivery: "தரச் சோதனை விகிதம்",
+    statsSupport: "அர்ப்பணிப்புள்ள ஆதரவு",
 
     companyIntroTitle: "நம்பகமான உலகளாவிய வர்த்தக கூட்டாளி",
     companyIntroDesc1: "செக்யூர்அக்ரி இம்பெக்ஸ் (SecureAgri Impex) என்பது இந்தியாவில் உள்ள ஒரு முன்னணி ஏற்றுமதி நிறுவனமாகும். விவசாயப் பொருட்கள், உயர்தர ஆடைகள், சூழல் நட்பு தேங்காய் நார் பொருட்கள் மற்றும் பிரீமியம் கைவினைப்பொருட்களை நேரடியாக உலகளாவிய வாங்குபவர்களுக்கு வழங்குவதில் நாங்கள் நிபுணத்துவம் பெற்றுள்ளோம்.",
@@ -135,7 +135,7 @@ export const translations = {
     productHighlights: "சிறப்பு தயாரிப்புகள்",
     viewAllProducts: "அனைத்து தயாரிப்புகளையும் காண்க",
     countriesTitle: "எங்கள் உலகளாவிய விநியோக வழித்தடங்கள்",
-    countriesSubtitle: "முக்கிய உலகளாவிய வர்த்தக வழித்தடங்களில் பிரீமியம் இந்திய பொருட்களை கன்டெய்னர் கண்காணிப்புடன் நாங்கள் வழங்குகிறோம்.",
+    countriesSubtitle: "முக்கிய உலகளாவிய வர்த்தக வழித்தடங்களில் பிரீமியம் இந்தியப் பொருட்களை கன்டெய்னர் கண்காணிப்புடன் அனுப்பும் முழுத் தகுதி பெற்றுள்ளோம்.",
     
     testimonialsTitle: "எங்கள் உலகளாவிய வாடிக்கையாளர்களின் கருத்துக்கள்",
     

@@ -8,9 +8,9 @@ const Home = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const stats = [
-    { num: "25+", labelKey: "statsProducts", icon: <Award size={28} /> },
-    { num: "15+", labelKey: "statsCountries", icon: <Globe size={28} /> },
-    { num: "99.8%", labelKey: "statsDelivery", icon: <Clock size={28} /> },
+    { num: "15+", labelKey: "statsProducts", icon: <Award size={28} /> },
+    { num: "50+", labelKey: "statsCountries", icon: <Globe size={28} /> },
+    { num: "100%", labelKey: "statsDelivery", icon: <Clock size={28} /> },
     { num: "24/7", labelKey: "statsSupport", icon: <ShieldCheck size={28} /> }
   ];
 
@@ -44,19 +44,22 @@ const Home = () => {
 
   const testimonials = [
     {
-      quote: "Excellent product quality and fast shipping. SecureAgri Impex has been our trusted supplier for Basmati Rice and Cardamom in the GCC region for over 3 years.",
+      quoteEn: "We received premium basmati rice samples from SecureAgri Impex. The grain length, aroma, and packaging quality are top-tier. Their transparency during our purchase discussions has been outstanding.",
+      quoteTa: "செக்யூர்அக்ரி இம்பெக்ஸ் நிறுவனத்திடமிருந்து பிரீமியம் பாசுமதி அரிசி மாதிரிகளைப் பெற்றோம். அரிசியின் நீளம், நறுமணம் மற்றும் பேக்கிங் தரம் மிகச் சிறப்பாக இருந்தது. எங்களது ஆரம்பக்கட்ட பேச்சுவார்த்தைகளில் அவர்களின் வெளிப்படைத்தன்மை பாராட்டத்தக்கது.",
       client: "Al-Hamad Foods Trading Co.",
       country: "Dubai, UAE",
       stars: 5
     },
     {
-      quote: "Highly professional service! Their organic cotton garments are top-tier, and the custom clearance documentation (APEDA & ISO) was perfectly handled.",
+      quoteEn: "Their support and responsiveness in providing verified registration proofs and customs compliance details during our procurement process have been highly professional.",
+      quoteTa: "எங்கள் கொள்முதல் செயல்பாட்டின் போது சரிபார்க்கப்பட்ட பதிவுச் சான்றுகள் மற்றும் சுங்க இணக்க விவரங்களை வழங்குவதில் அவர்களின் ஆதரவு மற்றும் உடனடி பதிலளிப்பு மிகவும் தொழில்முறையாக இருந்தது.",
       client: "Vogue Imports Ltd.",
       country: "London, UK",
       stars: 5
     },
     {
-      quote: "Moisture levels and packaging of the coir peat blocks were exactly as specified. Exceptional customer service and prompt container tracking updates.",
+      quoteEn: "We inspected their trial shipment of fresh coconuts and coir peat blocks. The moisture levels and weight parameters strictly matched the contract specification sheet.",
+      quoteTa: "புதிய தேங்காய்கள் மற்றும் தேங்காய் நார்க்கழிவு உரக் கட்டிகளின் மாதிரிகளை நாங்கள் ஆய்வு செய்தோம். ஈரப்பதம் மற்றும் எடை அளவுகள் ஒப்பந்தத்தில் குறிப்பிட்டபடியே துல்லியமாக இருந்தன.",
       client: "GreenGrow Hydroponics",
       country: "Singapore",
       stars: 5
@@ -272,7 +275,7 @@ const Home = () => {
               ))}
             </div>
             <p className="testimonial-quote">
-              “{testimonials[currentTestimonial].quote}”
+              “{lang === "ta" ? testimonials[currentTestimonial].quoteTa : testimonials[currentTestimonial].quoteEn}”
             </p>
             <div className="testimonial-client">
               {testimonials[currentTestimonial].client}
