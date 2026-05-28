@@ -39,11 +39,11 @@ const InquiryForm = ({ initialProduct = "" }) => {
 
     const hasTelegram = !!(CONFIG.TELEGRAM_BOT_TOKEN && CONFIG.TELEGRAM_CHAT_ID);
 
-    // 1. Prepare Email Notification via FormSubmit (Direct to afrinnibisha65@gmail.com)
+    // 1. Prepare Email Notification via FormSubmit (Direct to afrinnibisha65@gmail.com securely)
     let emailPromise = Promise.resolve();
-    const targetEmail = "afrinnibisha65@gmail.com";
+    const formToken = "41b8aab6c0238a65089b5c025e1ea545";
     
-    emailPromise = fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+    emailPromise = fetch(`https://formsubmit.co/ajax/${formToken}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
