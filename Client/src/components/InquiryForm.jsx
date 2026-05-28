@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { useApp } from "../context/AppContext";
 import { products } from "../data/productsData";
+import { CONFIG } from "../config";
 
 const InquiryForm = ({ initialProduct = "" }) => {
   const { t, lang } = useApp();
@@ -28,7 +29,7 @@ const InquiryForm = ({ initialProduct = "" }) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.phone) {
       alert(lang === "ta" ? "தயவுசெய்து தேவையான அனைத்து விவரங்களையும் நிரப்பவும்." : "Please fill in all required fields.");
@@ -36,19 +37,94 @@ const InquiryForm = ({ initialProduct = "" }) => {
     }
     setIsSubmitting(true);
 
-    // Simulate API request
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        product: "",
-        quantity: "",
-        message: ""
-      });
-    }, 1200);
+    const hasWeb3Forms = !!CONFIG.WEB3FORMS_ACCESS_KEY;
+    const hasTelegram = !!(CONFIG.TELEGRAM_BOT_TOKEN && CONFIG.TELEGRAM_CHAT_ID);
+
+    // 1. Prepare Email Notification via Web3Forms
+    let emailPromise = Promise.resolve();
+    if (hasWeb3Forms) {
+      emailPromise = fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: CONFIG.WEB3FORMS_ACCESS_KEY,
+          subject: `New Bulk Inquiry from ${formData.name} - SecureAgri Impex`,
+          from_name: "SecureAgri Impex Portal",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          product: formData.product || "Not Specified",
+          quantity: formData.quantity || "Not Specified",
+          message: formData.message || "No message provided."
+        })
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (!data.success) {
+            console.error("Web3Forms Email submission failed:", data.message);
+          } else {
+            console.log("Web3Forms Email sent successfully!");
+          }
+        })
+        .catch((err) => console.error("Error submitting to Web3Forms:", err));
+    } else {
+      console.warn("Web3Forms Access key is not configured in Client/src/config.js. Sourcing mock email transmission instead.");
+    }
+
+    // 2. Prepare Telegram Notification via Bot API
+    let telegramPromise = Promise.resolve();
+    if (hasTelegram) {
+      const messageText = `🔔 *New Bulk Inquiry Received!*\n\n` +
+                          `👤 *Name/Company:* ${formData.name}\n` +
+                          `📧 *Email:* ${formData.email}\n` +
+                          `📞 *Phone:* ${formData.phone}\n` +
+                          `🌾 *Product:* ${formData.product || "Not Specified"}\n` +
+                          `⚖️ *Quantity:* ${formData.quantity || "Not Specified"}\n` +
+                          `💬 *Message:* ${formData.message || "No message provided."}`;
+
+      telegramPromise = fetch(`https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CONFIG.TELEGRAM_CHAT_ID,
+          text: messageText,
+          parse_mode: "Markdown"
+        })
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (!data.ok) {
+            console.error("Telegram Bot API submission failed:", data.description);
+          } else {
+            console.log("Telegram notification sent successfully!");
+          }
+        })
+        .catch((err) => console.error("Error submitting to Telegram Bot API:", err));
+    } else {
+      console.warn("Telegram Bot Token or Chat ID is not configured in Client/src/config.js. Sourcing mock Telegram dispatch instead.");
+    }
+
+    try {
+      // Add a minimum duration of 1000ms for loading state transitions
+      await Promise.all([
+        emailPromise,
+        telegramPromise,
+        new Promise((resolve) => setTimeout(resolve, 1000))
+      ]);
+    } catch (err) {
+      console.error("Notification dispatch encountered errors:", err);
+    }
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      product: "",
+      quantity: "",
+      message: ""
+    });
   };
 
   if (isSubmitted) {
