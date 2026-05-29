@@ -75,7 +75,7 @@ const About = () => {
       <section className="section">
         <div className="container">
           <div className="info-row" style={{ marginBottom: "5rem" }}>
-            <div className="info-col-text">
+            <div className="info-col-text reveal">
               <h2 style={{ fontSize: "2rem", marginBottom: "1.5rem", borderBottom: "2px solid var(--accent)", paddingBottom: "0.5rem" }}>
                 {t("aboutStoryTitle")}
               </h2>
@@ -94,7 +94,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="info-col-img">
+            <div className="info-col-img reveal delay-200">
               <div className="img-frame">
                 <img
                   src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=800&auto=format&fit=crop"
@@ -104,8 +104,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="info-row" style={{ flexDirection: "row-reverse" }}>
-            <div className="info-col-text">
+          <div className="info-row" style={{ flexDirection: "row-reverse", marginBottom: "5rem" }}>
+            <div className="info-col-text reveal">
               <h2 style={{ fontSize: "2rem", marginBottom: "1.5rem", borderBottom: "2px solid var(--accent)", paddingBottom: "0.5rem" }}>
                 {t("founderVisionTitle")}
               </h2>
@@ -119,7 +119,7 @@ const About = () => {
                 <strong>- Georshan, Founder & Managing Director, SecureAgri Impex</strong>
               </div>
             </div>
-            <div className="info-col-img">
+            <div className="info-col-img reveal delay-200">
               <div className="img-frame">
                 <img
                   src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop"
@@ -134,14 +134,14 @@ const About = () => {
       {/* Mission & Values */}
       <section className="section" style={{ backgroundColor: "var(--bg-light)", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>{t("valuesTitle")}</h2>
             <p>{lang === "ta" ? "நேர்மையான மற்றும் பாதுகாப்பான ஏற்றுமதி வர்த்தகத்திற்கான எங்களது தூண்கள்." : "The founding principles that guide every shipment and transaction at SecureAgri Impex."}</p>
           </div>
 
           <div className="grid grid-2">
             {values.map((v, i) => (
-              <div key={i} className="why-card" style={{ display: "flex", gap: "1.5rem", alignItems: "flex-start", padding: "2rem" }}>
+              <div key={i} className={`why-card reveal delay-${(i + 1) * 100}`} style={{ display: "flex", gap: "1.5rem", alignItems: "flex-start", padding: "2rem" }}>
                 <div className="why-icon" style={{ flexShrink: 0, margin: 0 }}>
                   {v.icon}
                 </div>
@@ -158,7 +158,7 @@ const About = () => {
       {/* Timeline Section */}
       <section className="section">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>{lang === "ta" ? "எங்கள் வளர்ச்சிப் பாதை" : "Our Growth Timeline"}</h2>
             <p>{lang === "ta" ? "கடந்த சில ஆண்டுகளில் நாங்கள் கடந்து வந்த மைல்கற்கள்." : "Milestones that define our commitment to scaling premium exports."}</p>
           </div>
@@ -209,7 +209,7 @@ const About = () => {
 
                   {/* Card content */}
                   <div
-                    className="why-card"
+                    className={`why-card reveal delay-${(index + 1) * 100}`}
                     style={{
                       width: "45%",
                       padding: "1.5rem",

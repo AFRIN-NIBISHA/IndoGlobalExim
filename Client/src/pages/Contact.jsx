@@ -56,7 +56,7 @@ const Contact = () => {
         <div className="container">
           <div className="contact-container">
             {/* Info Cards Column */}
-            <div className="contact-info-list">
+            <div className="contact-info-list reveal">
               <h2 style={{ fontSize: "1.75rem", color: "var(--primary)", marginBottom: "1rem" }}>
                 {lang === "ta" ? "எங்களை நேரடியாகத் தொடர்பு கொள்ள" : "Corporate Coordinates"}
               </h2>
@@ -149,7 +149,7 @@ const Contact = () => {
             </div>
 
             {/* Form Column */}
-            <div>
+            <div className="reveal delay-200">
               <InquiryForm />
             </div>
           </div>
@@ -159,14 +159,14 @@ const Contact = () => {
       {/* Gallery Section */}
       <section className="section" style={{ backgroundColor: "var(--bg-light)", borderTop: "1px solid var(--border-color)" }}>
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>{lang === "ta" ? "காட்சிக் கூடம்" : "Export & Sourcing Gallery"}</h2>
             <p>{lang === "ta" ? "எங்கள் உற்பத்தி ஆலை மற்றும் ஏற்றுமதி கன்டெய்னர் ஏற்றுதல் புகைப்படங்கள்." : "Visual highlights from our procurement networks, packaging systems, and port loadings."}</p>
           </div>
 
           <div className="gallery-grid">
             {galleryItems.map((item, idx) => (
-              <div key={idx} className="gallery-card">
+              <div key={idx} className={`gallery-card reveal delay-${((idx % 4) + 1) * 100}`}>
                 <img src={item.img} alt={item.titleEn} />
                 <div className="gallery-card-overlay">
                   <div className="gallery-card-category">

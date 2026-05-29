@@ -188,7 +188,7 @@ const Home = () => {
       <section className="section">
         <div className="container">
           <div className="info-row">
-            <div className="info-col-text">
+            <div className="info-col-text reveal">
               <span className="text-accent" style={{ fontWeight: 700, textTransform: "uppercase", fontSize: "0.85rem", letterSpacing: "1px" }}>
                 WHO WE ARE
               </span>
@@ -203,7 +203,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="info-col-img">
+            <div className="info-col-img reveal delay-200">
               <div className="img-frame">
                 <img
                   src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
@@ -218,14 +218,14 @@ const Home = () => {
       {/* Featured Products */}
       <section className="section" style={{ backgroundColor: "var(--bg-light)", borderTop: "1px solid var(--border-color)" }}>
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>{t("productHighlights")}</h2>
             <p>{lang === "ta" ? "எங்கள் சிறந்த மற்றும் உலகளாவிய தரம் வாய்ந்த ஏற்றுமதி பொருட்களின் தொகுப்பு." : "A curated selection of our highest-demand export categories."}</p>
           </div>
 
           <div className="grid grid-3">
-            {highlights.map((prod) => (
-              <div key={prod.id} className="product-card">
+            {highlights.map((prod, i) => (
+              <div key={prod.id} className={`product-card reveal delay-${(i + 1) * 100}`}>
                 <div className="product-img-wrapper">
                   <img src={prod.img} alt={prod.nameKey} />
                   <span className="product-category-tag">{prod.cat}</span>
@@ -258,12 +258,12 @@ const Home = () => {
       {/* Interactive Export Map */}
       <section className="section" style={{ backgroundColor: "#0A1424", color: "#FFF" }}>
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2 style={{ color: "#FFF" }}>{t("countriesTitle")}</h2>
             <p style={{ color: "#94A3B8" }}>{t("countriesSubtitle")}</p>
           </div>
 
-          <div className="map-container">
+          <div className="map-container reveal delay-200">
             <h3 style={{ color: "var(--accent)", marginBottom: "1rem", textAlign: "center" }}>
               {lang === "ta" ? "விநியோக வழித்தடம் & போக்குவரத்து நேரம்" : "Explore Shipping Routes & Transit Times"}
             </h3>
@@ -328,12 +328,12 @@ const Home = () => {
       {/* Testimonials */}
       <section className="section" style={{ borderBottom: "1px solid var(--border-color)" }}>
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>{t("testimonialsTitle")}</h2>
             <p>{lang === "ta" ? "எங்கள் வாடிக்கையாளர்களின் நம்பிக்கையான சான்றுகள்." : "Feedback from verified wholesale buyers worldwide."}</p>
           </div>
 
-          <div className="testimonial-carousel">
+          <div className="testimonial-carousel reveal delay-200">
             <div className="flex-center" style={{ gap: "0.25rem", color: "var(--accent-gold)", marginBottom: "1rem" }}>
               {[...Array(testimonials[currentTestimonial].stars)].map((_, i) => (
                 <Star key={i} size={18} fill="currentColor" />

@@ -83,14 +83,14 @@ const WhyChooseUs = () => {
       {/* Benefits grid */}
       <section className="section">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>{lang === "ta" ? "எங்கள் தனிச்சிறப்புகள்" : "What Sets Us Apart"}</h2>
             <p>{t("whySubtitle")}</p>
           </div>
 
           <div className="grid grid-3">
             {benefits.map((benefit, i) => (
-              <div key={i} className="why-card">
+              <div key={i} className={`why-card reveal delay-${((i % 3) + 1) * 100}`}>
                 <div className="why-icon">
                   {benefit.icon}
                 </div>
@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
       <section className="section" style={{ backgroundColor: "var(--bg-light)", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
         <div className="container">
           <div className="info-row">
-            <div className="info-col-text">
+            <div className="info-col-text reveal">
               <span className="text-accent" style={{ fontWeight: 700, textTransform: "uppercase", fontSize: "0.85rem", letterSpacing: "1px" }}>
                 QA STANDARDS
               </span>
@@ -136,7 +136,7 @@ const WhyChooseUs = () => {
               </div>
             </div>
 
-            <div className="info-col-img">
+            <div className="info-col-img reveal delay-200">
               <div className="img-frame">
                 <img
                   src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop"
@@ -151,12 +151,12 @@ const WhyChooseUs = () => {
       {/* FAQ Accordion Section */}
       <section className="section">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>{t("faqTitle")}</h2>
             <p>{lang === "ta" ? "பயனர்கள் அடிக்கடி கேட்கும் சில பொதுவான வினாக்கள்." : "Common questions about ordering, custom clearances, and shipping."}</p>
           </div>
 
-          <div className="faq-list">
+          <div className="faq-list reveal delay-200">
             <FAQItem
               q={lang === "ta" ? "குறைந்தபட்ச ஆர்டர் அளவு (MOQ) எவ்வளவு?" : "What is your typical Minimum Order Quantity (MOQ)?"}
               a={lang === "ta" 
@@ -191,7 +191,7 @@ const WhyChooseUs = () => {
 
       {/* CTA Box */}
       <section className="section" style={{ backgroundColor: "var(--primary)", color: "var(--text-white)", padding: "4rem 0", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
+        <div className="container reveal" style={{ maxWidth: "700px" }}>
           <h2 style={{ color: "#FFF", fontSize: "2rem", marginBottom: "1rem" }}>
             {lang === "ta" ? "மொத்த ஆர்டர்கள் பற்றி பேசலாமா?" : "Ready to Discuss a Bulk Import?"}
           </h2>

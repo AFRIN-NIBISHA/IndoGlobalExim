@@ -148,7 +148,7 @@ const Certifications = () => {
       <section className="section">
         <div className="container">
           <div className="info-row" style={{ marginBottom: "4rem", alignItems: "center" }}>
-            <div className="info-col-text">
+            <div className="info-col-text reveal">
               <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
                 {lang === "ta" ? "சர்வதேச தர இணக்க உத்திரவாதம்" : "Building Global Buyer Trust through Legal Compliance"}
               </h2>
@@ -170,7 +170,7 @@ const Certifications = () => {
                 </div>
               </div>
             </div>
-            <div className="info-col-img" style={{ flex: 0.8 }}>
+            <div className="info-col-img reveal delay-200" style={{ flex: 0.8 }}>
               <div className="why-card text-center" style={{ border: "2px dashed var(--accent)", padding: "3rem" }}>
                 <Award size={64} style={{ color: "var(--accent)", marginBottom: "1rem" }} />
                 <h3 style={{ fontSize: "1.25rem", color: "var(--primary)", marginBottom: "0.5rem" }}>
@@ -185,8 +185,8 @@ const Certifications = () => {
 
           {/* Badges Grid */}
           <div className="cert-grid">
-            {certificationsList.map((cert) => (
-              <div key={cert.id} className="cert-card" onClick={() => setActiveCert(cert)}>
+            {certificationsList.map((cert, i) => (
+              <div key={cert.id} className={`cert-card reveal delay-${((i % 3) + 1) * 100}`} onClick={() => setActiveCert(cert)}>
                 <div className="cert-badge-placeholder">
                   {cert.code}
                 </div>

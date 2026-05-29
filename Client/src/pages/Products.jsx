@@ -182,7 +182,7 @@ const Products = () => {
       <section className="section">
         <div className="container">
           {/* Search bar & Filter tabs */}
-          <div style={{ maxWidth: "600px", margin: "0 auto 2.5rem auto" }}>
+          <div style={{ maxWidth: "600px", margin: "0 auto 2.5rem auto" }} className="reveal">
             <input
               type="text"
               placeholder={lang === "ta" ? "தயாரிப்புகளை தேடுக..." : "Search products, specifications, or categories..."}
@@ -199,7 +199,7 @@ const Products = () => {
             />
           </div>
 
-          <div className="filter-bar">
+          <div className="filter-bar reveal delay-100">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -213,8 +213,8 @@ const Products = () => {
 
           {/* Catalog grid */}
           <div className="grid grid-3">
-            {filteredProducts.map((prod) => (
-              <div key={prod.id} className="product-card">
+            {filteredProducts.map((prod, i) => (
+              <div key={prod.id} className={`product-card reveal delay-${((i % 3) + 1) * 100}`}>
                 <div className="product-img-wrapper">
                   <img src={productImageMap[prod.id]} alt={prod.nameEn} />
                   <span className="product-category-tag">
