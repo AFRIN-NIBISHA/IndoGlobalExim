@@ -1,17 +1,79 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, ChevronLeft, ChevronRight, CheckCircle2, ShieldCheck, Globe, Clock, Award } from "lucide-react";
 import { useApp } from "../context/AppContext";
+
+const AnimatedCounter = ({ target, suffix = "", duration = 1500 }) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    if (!window.IntersectionObserver) {
+      setHasStarted(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let start = 0;
+    const end = parseInt(target, 10);
+    if (start === end) return;
+
+    let startTimestamp = null;
+    let animId;
+
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      
+      const easeOutQuad = (t) => t * (2 - t);
+      const current = Math.floor(easeOutQuad(progress) * (end - start) + start);
+      
+      setCount(current);
+
+      if (progress < 1) {
+        animId = window.requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+
+    animId = window.requestAnimationFrame(step);
+    return () => window.cancelAnimationFrame(animId);
+  }, [hasStarted, target, duration]);
+
+  return <span ref={elementRef}>{count}{suffix}</span>;
+};
 
 const Home = () => {
   const { t, lang } = useApp();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const stats = [
-    { num: "15+", labelKey: "statsProducts", icon: <Award size={28} /> },
-    { num: "50+", labelKey: "statsCountries", icon: <Globe size={28} /> },
-    { num: "100%", labelKey: "statsDelivery", icon: <Clock size={28} /> },
-    { num: "24/7", labelKey: "statsSupport", icon: <ShieldCheck size={28} /> }
+    { target: 15, suffix: "+", labelKey: "statsProducts", icon: <Award size={28} /> },
+    { target: 50, suffix: "+", labelKey: "statsCountries", icon: <Globe size={28} /> },
+    { target: 100, suffix: "%", labelKey: "statsDelivery", icon: <Clock size={28} /> },
+    { target: 24, suffix: "/7", labelKey: "statsSupport", icon: <ShieldCheck size={28} /> }
   ];
 
   const highlights = [
@@ -113,7 +175,9 @@ const Home = () => {
               <div className="why-icon" style={{ marginBottom: "0.5rem" }}>
                 {stat.icon}
               </div>
-              <div className="stat-num">{stat.num}</div>
+              <div className="stat-num">
+                <AnimatedCounter target={stat.target} suffix={stat.suffix} />
+              </div>
               <div className="stat-label">{t(stat.labelKey)}</div>
             </div>
           ))}
